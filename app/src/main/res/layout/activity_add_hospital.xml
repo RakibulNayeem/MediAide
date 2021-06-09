@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center"
+    tools:context=".AddHospital">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Add Hospital Details"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal" />
+
+
+
+            <EditText
+                android:id="@+id/hospitalNameEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Hospital name "
+                android:inputType="textPersonName"
+                />
+
+            <EditText
+                android:id="@+id/hospitalCategoryEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Hospital Category "
+                android:inputType="textPersonName"
+                />
+
+
+
+            <EditText
+                android:id="@+id/addressEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Address"
+                />
+
+            <AutoCompleteTextView
+                android:id="@+id/zillaEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Zilla(again)"
+                android:completionThreshold="1"
+                />
+
+
+            <EditText
+                android:id="@+id/phoneNumberEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Phone number"
+                android:inputType="phone"
+                />
+
+
+
+            <Button
+                android:id="@+id/addHospitalBtnId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:background="@drawable/round_bg"
+                android:textAllCaps="false"
+                android:text="Add" />
+
+
+            <ProgressBar
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressbarId"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        </TableLayout>
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

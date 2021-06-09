@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center"
+    tools:context=".Post">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <!--    <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Write A Post"
+                android:id="@+id/textView"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal" />
+                -->
+
+            <LinearLayout
+                android:layout_marginBottom="20dp"
+                android:background="#BDBABA"
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+
+            </LinearLayout>
+
+            <AutoCompleteTextView
+                android:id="@+id/bloodGroupEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Blood Group"
+                android:completionThreshold="1"
+                />
+
+
+
+
+            <EditText
+                android:id="@+id/hospitalNameEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Hospital Name/Area(with Location)"
+                android:inputType="textPersonName"
+                />
+
+            <AutoCompleteTextView
+                android:id="@+id/zillaEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Zilla"
+                android:completionThreshold="1"
+                />
+
+
+            <EditText
+                android:id="@+id/phoneNumberEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Phone number"
+                android:inputType="phone"
+                />
+
+
+
+            <EditText
+                android:id="@+id/dateTimeEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Date and Time"
+                android:inputType="textMultiLine"
+                />
+
+
+            <EditText
+                android:id="@+id/detailsEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:singleLine="true"
+                android:minHeight="80dp"
+                android:gravity="start"
+                android:inputType="textCapSentences|textMultiLine"
+                android:hint="Details(Purpose and number of bags)"
+                />
+
+
+            <Button
+                android:id="@+id/postBtnId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:textAllCaps="false"
+                android:text="Post" />
+
+
+            <ProgressBar
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressbarId"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

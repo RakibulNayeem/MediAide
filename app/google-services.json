@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "530445982739",
+    "firebase_url": "https://mediaide.firebaseio.com",
+    "project_id": "mediaide",
+    "storage_bucket": "mediaide.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530445982739:android:c741c8d97893b197ba73e6",
+        "android_client_info": {
+          "package_name": "com.rakibulnayeem.mediaide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530445982739-lbgddnf3s34k9tu0hvdiq7ckltuo9igi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rakibulnayeem.mediaide",
+            "certificate_hash": "f32f45723480b8d3399ac0943a68627eabcceb9e"
+          }
+        },
+        {
+          "client_id": "530445982739-l1hgvc0l4vh0fep6n7clkjs54h77t7cm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdcaCugkqczWtKo2vdAFsdYdyOraOSIRA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "530445982739-l1hgvc0l4vh0fep6n7clkjs54h77t7cm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

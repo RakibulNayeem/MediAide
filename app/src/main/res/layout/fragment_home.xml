@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EEEFE2E2"
+    android:padding="5dp"
+    tools:context=".HomeFragment">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <!--1st and 2nd cardview -->
+
+            <LinearLayout
+
+                android:padding="5dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:background="#EEEFE2E2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                ///1st cardview of this line
+                <LinearLayout
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/searchCardViewId"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/search_icon"
+                                />
+                            <TextView
+                                android:textAlignment="center"
+                                android:padding="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/search"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                />
+
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_marginTop="-8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/search_details_text"
+                                android:padding="5dp"
+                                />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </LinearLayout>
+
+                //2nd cardview of this line
+
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/postCardViewId"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/copywriting"
+                                />
+                            <TextView
+                                android:textAlignment="center"
+                                android:padding="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/post"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                />
+
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_marginTop="-8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/post_details_text"
+                                android:padding="5dp"
+                                />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            ///3rd and 4th cardview
+
+            <LinearLayout
+
+                android:padding="5dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:background="#EEEFE2E2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                ///1st cardview of this line
+                <LinearLayout
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/bloodBankCardViewId"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/blood_bank"
+                                />
+                            <TextView
+                                android:textAlignment="center"
+                                android:padding="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/blood_bank"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                />
+
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_marginTop="-8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/blood_bank_details_text"
+                                android:padding="5dp"
+                                />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </LinearLayout>
+
+                //2nd cardview of this line
+
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/addDonorCardViewId"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/add_donor"
+                                />
+                            <TextView
+                                android:textAlignment="center"
+                                android:padding="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_donor"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                />
+
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_marginTop="-8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_donor_details_text"
+                                android:padding="5dp"
+                                />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+            ///5th and 6th cardview
+
+
+            <LinearLayout
+
+                android:padding="5dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:background="#EEEFE2E2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                ///1st cardview of this line
+                <LinearLayout
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/hospitalCardViewId"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/hospital"
+                                />
+                            <TextView
+                                android:textAlignment="center"
+                                android:padding="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/hospital"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                />
+
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_marginTop="-8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/hospital_details_text"
+                                android:padding="5dp"
+                                />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </LinearLayout>
+
+                //2nd cardview of this line
+
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/doctorsCardViewId"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/doctor"
+                                />
+                            <TextView
+                                android:textAlignment="center"
+                                android:padding="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/doctors"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                />
+
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_marginTop="-8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/doctors_details_text"
+                                android:padding="5dp"
+                                />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            ///7th and 8th cardview
+
+
+            <LinearLayout
+                android:padding="5dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:background="#EEEFE2E2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                1st cardview of this line
+                <LinearLayout
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ambulanceCardViewId"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/ambulance"
+                                />
+                            <TextView
+                                android:textAlignment="center"
+                                android:padding="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ambulance"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                />
+
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_marginTop="-8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ambulance_details_text"
+                                android:padding="5dp"
+                                />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                //2nd cardview of this line
+
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/organizationsCardViewId"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/organizations"
+                                />
+                            <TextView
+                                android:textAlignment="center"
+                                android:padding="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/organizations"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                />
+
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_marginTop="-8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/organizations_details_text"
+                                android:padding="5dp"
+                                />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            /// 9th and 10th cardview
+
+
+            <LinearLayout
+                android:padding="5dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:background="#EEEFE2E2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                //1st cardview of this line
+
+                <LinearLayout
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/factsCardViewId"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/facts"
+                                />
+                            <TextView
+                                android:textAlignment="center"
+                                android:padding="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/facts"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                />
+
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_marginTop="-8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/facts_details_text"
+                                android:padding="5dp"
+                                />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                2nd cardview of this line
+
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/healthCareCardViewId"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/health_tips"
+                                />
+                            <TextView
+                                android:textAlignment="center"
+                                android:padding="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/health_care"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                />
+
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_marginTop="-8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/health_care_details_text"
+                                android:padding="5dp"
+                                />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            /// 11th and 12th cardview
+
+            <LinearLayout
+                android:padding="5dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:background="#EEEFE2E2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                1st cardview of this line
+                <LinearLayout
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/aboutAppCardViewId"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/about_app"
+                                />
+                            <TextView
+                                android:textAlignment="center"
+                                android:padding="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/about_us"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                />
+
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_marginTop="-8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/about_us_details_text"
+                                android:padding="5dp"
+                                />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </LinearLayout>
+
+                //2nd cardview of this line
+
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/userFeedbackCardViewId"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/feedback"
+                                />
+                            <TextView
+                                android:textAlignment="center"
+                                android:padding="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/user_feedback"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                />
+
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_marginTop="-8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/user_feedback_details_text"
+                                android:padding="5dp"
+                                />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/shareAppTvId"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Share to Save Life"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="15dp"
+                android:drawableLeft="@drawable/ic_share_black_24dp"
+                android:textColor="#C51A1A"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                />
+
+
+
+            <TextView
+                android:id="@+id/rateAppTvId"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Rate our app and give review"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="15dp"
+                android:drawableLeft="@drawable/playstore_icon"
+                android:textColor="#C51A1A"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+</FrameLayout>

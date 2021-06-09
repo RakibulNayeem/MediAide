@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#EEEFE2E2"
+    android:layout_height="wrap_content"
+    tools:context=".UpdateProfile">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Update Profile"
+                android:textStyle="bold"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal" />
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="#CDCBCB"
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/nameEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                />
+
+
+            <AutoCompleteTextView
+                android:id="@+id/bloodGroupEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Blood Group"
+                android:completionThreshold="1"
+                />
+
+
+      <!--      <LinearLayout
+                android:weightSum="4"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_weight="2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="Blood Group : "
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/BGTvId"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text=""
+                    android:textAlignment="textStart"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="5dp"
+                    />
+
+
+               <ImageView
+                   android:id="@+id/BGDropDownIvId"
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                   />
+
+            </LinearLayout>    -->
+
+
+            <LinearLayout
+                android:weightSum="4"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/lastDDEtId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="Last Donation Date(d/m/y)"
+                    android:inputType="textPersonName"
+                    />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/idontKnowTvId"
+                        android:background="@android:drawable/dialog_holo_light_frame"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" I don't know "
+                        android:padding="10dp"
+                        android:textSize="15sp"
+                        android:textColor="#000000"
+                        />
+
+
+                    <TextView
+                        android:padding="10dp"
+                        android:id="@+id/more4MonthTvId"
+                        android:background="@android:drawable/dialog_holo_light_frame"
+                        android:textAlignment="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" More than 4 months "
+                        android:textSize="15sp"
+                        android:textColor="#000000"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/villageEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Area/Village"
+                android:inputType="textPersonName"
+                />
+
+
+            <EditText
+                android:id="@+id/upazilaEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Upazila/University"
+                />
+
+
+
+            <AutoCompleteTextView
+                android:id="@+id/zillaEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Zilla"
+                android:completionThreshold="1"
+                />
+
+
+
+            <EditText
+                android:id="@+id/emailEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:hint="Email (optional)"
+                android:inputType="textEmailAddress" />
+
+
+            <EditText
+                android:id="@+id/statusEtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Status(e.g:I want to donate blood any area in Rajshahi.)"
+                android:inputType="textMultiLine"
+                />
+
+
+            <Button
+                android:id="@+id/buttonSignupId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:textSize="20dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:background="@drawable/round_bg"
+                android:text="Update" />
+
+            <ProgressBar
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressbarId"
+                android:layout_gravity="center"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

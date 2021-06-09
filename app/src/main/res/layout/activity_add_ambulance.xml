@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center"
+    tools:context=".AddAmbulance">
+
+
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1">
+
+            <!-- everything you already have -->
+            <LinearLayout
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Add Ambulance Details"
+                    android:id="@+id/textView"
+                    android:layout_gravity="center_horizontal" />
+
+
+                <EditText
+                    android:id="@+id/serviceNameEtId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:hint="Ambulance Name "
+                    android:inputType="textPersonName"
+                    />
+
+
+                <EditText
+                    android:id="@+id/driverNameEtId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:hint="Driver Name "
+                    android:inputType="textPersonName"
+                    />
+
+
+                <EditText
+                    android:id="@+id/typeEtId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:hint="Service Types(e.g: ICU, CCU, PICU)"
+                    />
+
+
+                <EditText
+                    android:id="@+id/addressEtId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:hint="Location"
+                    />
+
+                <AutoCompleteTextView
+                    android:id="@+id/zillaEtId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:hint="Zilla Name"
+                    android:completionThreshold="1"
+                    />
+
+
+
+                <EditText
+                    android:id="@+id/vehicleEtId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:hint="Car No"
+                    />
+
+
+                <EditText
+                    android:id="@+id/phoneNumberEtId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    />
+
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="10"
+                    android:paddingLeft="5dp"
+                    android:padding="1dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_weight="6.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Available : "
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        />
+
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/availableSwitchId"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_marginLeft="1dp"
+                        android:textOff="No"
+                        android:textOn="Yes"
+                        android:checked="true"
+                        app:showText="true"
+                        android:thumb="@drawable/switch_thumb"
+                        app:track="@drawable/switch_track"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+
+
+                <Button
+                    android:id="@+id/addAmbulanceBtnId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18dp"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:background="@drawable/round_bg"
+                    android:textAllCaps="false"
+                    android:text="Create Account" />
+
+
+                <ProgressBar
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progressbarId"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

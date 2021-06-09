@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <item
+        android:id="@+id/searchActionMenuId"
+        android:title="@string/search"
+        android:icon="@drawable/ic_search_black_24dp"
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView" />
+
+
+    <item
+        android:id="@+id/addDoctorMenuId"
+        android:icon="@drawable/add_icon_2"
+        app:showAsAction="never"
+        android:title="@string/add_doctors"
+        />
+
+    <item
+        android:id="@+id/showYourDoctorAccountMenuId"
+        android:icon="@drawable/add_icon_2"
+        app:showAsAction="never"
+        android:title="@string/view_your_page"
+        />
+
+    <!--
+    <item
+           android:id="@+id/addDoctorByAdminMenuId"
+           android:icon="@drawable/add_icon_2"
+           app:showAsAction="never"
+           android:title="@string/add_doctor_admin"
+           />
+
+
+
+    <item
+           android:id="@+id/approveDoctorMenuId"
+           app:showAsAction="never"
+           android:title="@string/approve_doctor"
+        />
+-->
+
+   </menu>

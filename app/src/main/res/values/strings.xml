@@ -1,0 +1,221 @@
+<resources>
+    <string name="app_name">MediAid</string>
+
+    <string name="search_details_text">Search donors By Area</string>
+
+    <string name="post">Post</string>
+    <string name="post_details_text">Post An Emergency Blood Request</string>
+
+
+    <string name="add_donor">Add Donor</string>
+    <string name="add_donor_details_text">Add Donors From Friend List</string>
+
+
+    <string name="blood_bank">Blood Bank</string>
+    <string name="blood_bank_details_text">Blood Banks in Your Area</string>
+
+
+    <string name="hospital">Hospitals</string>
+    <string name="hospital_details_text">Hospitals/Clinics in Your Area</string>
+
+
+    <string name="doctors">Doctors</string>
+    <string name="doctors_details_text">Doctors Details In Your Area</string>
+
+    <string name="organizations">Organizations</string>
+    <string name="organizations_details_text">Blood Related Organizations Near You</string>
+
+    <string name="health_care">Health Care</string>
+    <string name="health_care_details_text">Health and Nutrition Tips</string>
+
+    <string name="ambulance">Ambulance</string>
+    <string name="ambulance_details_text">Ambulance Service in Your Area</string>
+
+    <string name="facts">Facts</string>
+    <string name="facts_details_text">Facts About Blood and Donating Blood</string>
+
+    <string name="about_us">About Us</string>
+    <string name="about_us_details_text">App and Developer Details</string>
+
+    <string name="user_feedback">User Feedback</string>
+    <string name="user_feedback_details_text">Feedback to Improve Any Feature</string>
+
+
+    <string-array name="blood_group_names">
+        <item>A+</item>
+        <item>A-</item>
+        <item>O+</item>
+        <item>O-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+
+    </string-array>
+
+
+    <string-array name="time">
+        <item>01.00</item>
+        <item>02.00</item>
+        <item>03.00</item>
+        <item>04.00</item>
+        <item>05.00</item>
+        <item>06.00</item>
+        <item>07.00</item>
+        <item>08.00</item>
+        <item>09.00</item>
+        <item>10.00</item>
+        <item>11.00</item>
+        <item>12.00</item>
+    </string-array>
+
+
+    <string-array name="am_pm">
+        <item>am</item>
+        <item>pm</item>
+
+    </string-array>
+
+
+    <string name="spinner_title">Select Blood Group</string>
+    <string name="splash_screen_moto">Donate Blood Save Lives</string>
+
+
+    <string name="designer_text">Designed and Developed By</string>
+    <string name="developer_name">Rakibul Nayeem</string>
+    <string name="study_text">Studying CSE at RUET</string>
+    <string name="copy_rights">All rights reserved</string>
+    <string name="contact_developer">Contact Developer</string>
+
+    <string name="facebook_page">MediAid Official Facebook Page</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_doctors">Are You a Doctor? Create Account</string>
+    <string name="view_your_page">Your Account</string>
+    <string name="email_optional">Email(optional)</string>
+    <string name="status">Status(e.g:I want to donate blood any area in Rajshahi.)</string>
+    <string name="last_donation_date_d_m_y">Last Donation Date(d/m/y)</string>
+    <string name="i_don_t_know">I don\'t know</string>
+    <string name="more_than_4_months">More than 4 months</string>
+    <string name="area_village">Area/Village</string>
+    <string name="upazila_university">Upazila/University</string>
+    <string name="zilla">Zilla</string>
+    <string name="ambulance_account">Create Account</string>
+    <string name="show_your_account">Your Account</string>
+    <string name="approve_blood_bank">Approve Blood Bank</string>
+    <string name="add_blood_bank">Add Blood Bank</string>
+    <string name="to_add_blood_bank_and_hospital">To add blood bank and hospital info contact with us</string>
+    <string name="click_here">click here..</string>
+    <string name="emergency_blood_needed">Emergency Blood Needed!</string>
+    <string name="add_doctor_admin">Add Doctor(Admin)</string>
+    <string name="add_doctor">Add Doctor</string>
+    <string name="specialist">Specialist</string>
+    <string name="approve_doctor">Approve Doctor</string>
+    <string name="active_day_e_g_sun_wed_friday_8_am_10_pm">Active Days(e.g. Sun-Wed, Only Friday 8.00 am - 10.00 pm)</string>
+    <string name="zilla_again">Zilla (again)</string>
+    <string name="phone_number">Phone number</string>
+    <string name="status_e_g_i_want_to_donate_blood_any_area_in_rajshahi">Status(e.g: I want to donate blood any area in Rajshahi.)</string>
+    <string name="select_hospital">Select Hospital</string>
+    <string name="search">Search</string>
+
+    <string-array name="bd_districts">
+        <item>Bagerhat</item>
+        <item>Bandarban</item>
+        <item>Barguna</item>
+        <item>Barishal</item>
+        <item>Bhola</item>
+        <item>Bogura</item>
+        <item>Brahmanbaria</item>
+        <item>Chandpur</item>
+        <item>Chapainababganj</item>
+        <item>Chattogram</item>
+        <item>Chuadanga</item>
+        <item>Coxs Bazar</item>
+        <item>Cumilla</item>
+        <item>Dhaka</item>
+        <item>Dinajpur</item>
+        <item>Faridpur</item>
+        <item>Feni</item>
+        <item>Gaibandha</item>
+        <item>Gazipur</item>
+        <item>Gopalganj</item>
+        <item>Habiganj</item>
+        <item>Jaipurhat</item>
+        <item>Jamalpur</item>
+        <item>Jashore</item>
+        <item>Jhalakati</item>
+        <item>Jhenaidah</item>
+        <item>Khagrachari</item>
+        <item>Khulna</item>
+        <item>Kishoreganj</item>
+        <item>Kurigram</item>
+        <item>Kushtia</item>
+        <item>Lakshmipur</item>
+        <item>Lalmonirhat</item>
+        <item>Madaripur</item>
+        <item>Magura</item>
+        <item>Manikganj</item>
+        <item>Meherpur</item>
+        <item>Moulvibazar</item>
+        <item>Munshiganj</item>
+        <item>Mymensingh</item>
+        <item>Naogaon</item>
+        <item>Narail</item>
+        <item>Narayanganj</item>
+        <item>Narsingdi</item>
+        <item>Natore</item>
+        <item>Netrokona</item>
+        <item>Nilphamari</item>
+        <item>Noakhali</item>
+        <item>Pabna</item>
+        <item>Panchagarh</item>
+        <item>Patuakhali</item>
+        <item>Pirojpur</item>
+        <item>Rajbari</item>
+        <item>Rajshahi</item>
+        <item>Rangamati</item>
+        <item>Rangpur</item>
+        <item>Satkhira</item>
+        <item>Shariatpur</item>
+        <item>Sherpur</item>
+        <item>Sirajganj</item>
+        <item>Sunamganj</item>
+        <item>Sylhet</item>
+        <item>Tangail</item>
+        <item>Thakurgaon</item>
+
+    </string-array>
+
+
+    <string-array name="doctor_specialization">
+
+        <item>Allergists</item>
+        <item>Anesthesiologists</item>
+        <item>Cardiologists</item>
+        <item>Cardiac surgeons</item>
+        <item>Dermatologists</item>
+        <item>Endocrinologists</item>
+        <item>Gastroenterologists</item>
+        <item>General surgeons</item>
+        <item>Gynecologists</item>
+        <item>Nephrologists</item>
+        <item>Neurologists</item>
+        <item>Oncologists</item>
+        <item>Ophthalmologists</item>
+        <item>Orthopedic surgeons</item>
+        <item>Otolaryngologists</item>
+        <item>Psychiatrists</item>
+        <item>Pulmonologists</item>
+        <item>Radiologists</item>
+        <item>Rheumatologists</item>
+        <item>Thoracic Surgery</item>
+        <item>Urologists</item>
+
+    </string-array>
+
+
+</resources>
+
+
+

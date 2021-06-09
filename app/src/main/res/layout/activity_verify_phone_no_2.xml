@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E8E5E5"
+    android:gravity="center"
+    tools:context=".VerifyPhoneNo_2">
+
+    <LinearLayout
+        android:gravity="center"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Verify Phone Number"
+            android:textStyle="bold"
+            android:id="@+id/textView"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_marginBottom="50dp"
+            android:background="#DDDCDC"
+            android:layout_width="match_parent"
+            android:layout_height="2dp">
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_margin="15dp"
+            android:id="@+id/otpEtId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:hint="Enter code"
+            android:background="#E3E3E3"
+            android:inputType="phone"
+            android:padding="10dp"
+            />
+
+        <Button
+            android:layout_margin="10dp"
+            android:id="@+id/verifyOTPBtnId"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verify"
+            style="@style/Widget.AppCompat.Button.Colored"
+            />
+
+        <ProgressBar
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarVerifyId2"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_margin="10dp"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="If you don't get any code, resend code after 45 seconds..."
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RESEND CODE"
+            android:textStyle="bold"
+            android:id="@+id/resendOtpId"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

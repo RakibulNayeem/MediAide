@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:layout_marginBottom="1dp"
+    android:padding="10dp">
+
+
+    <LinearLayout
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameCardTvId"
+                android:text="Name"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Address : "
+                android:textColor="#000000"
+                android:textStyle="normal"
+                android:textSize="17sp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addressCardTvId"
+                android:text=""
+                android:textStyle="normal"
+                android:textSize="17sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Category : "
+                android:textColor="#000000"
+                android:textStyle="normal"
+                android:textSize="17sp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/categoryCardTvId"
+                android:text=""
+                android:textStyle="normal"
+                android:textSize="17sp"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--zilla and contact-->
+
+            <LinearLayout
+                android:layout_weight="1.75"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#000000"
+                        android:text="Zilla : "
+                        android:textStyle="normal"
+                        android:textSize="17sp"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/zillaCardTvId"
+                        android:text=""
+                        android:textStyle="normal"
+                        android:textSize="17sp"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#000000"
+                        android:text="Contact : "
+                        android:textStyle="normal"
+                        android:textSize="17sp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/phoneNumberCardTvId"
+                        android:text=""
+                        android:textStyle="normal"
+                        android:textSize="17sp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--call button-->
+            <ImageView
+                android:layout_margin="2dp"
+                android:layout_weight="0.25"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_call_icon"
+                android:id="@+id/callHospitalBtnId"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

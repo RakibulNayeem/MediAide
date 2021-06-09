@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center"
+    tools:context=".AddOrganizations">
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Add Organization Details"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal" />
+
+
+
+        <EditText
+            android:id="@+id/nameEtId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Organization name "
+            android:inputType="textPersonName"
+            />
+
+
+        <EditText
+            android:id="@+id/addressEtId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Full Address"
+            />
+
+        <AutoCompleteTextView
+            android:id="@+id/zillaEtId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="@string/zilla_again"
+            android:completionThreshold="1"
+            />
+
+        <EditText
+            android:id="@+id/openEtId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Open : (e.g: 24 hours)"
+            />
+
+
+        <EditText
+            android:id="@+id/phoneNumberEtId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            />
+
+
+
+        <Button
+            android:id="@+id/addOrganizationBtnId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="20dp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@drawable/round_bg"
+            android:textAllCaps="false"
+            android:text="Add" />
+
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressbarId"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

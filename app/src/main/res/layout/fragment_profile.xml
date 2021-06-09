@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal"
+                android:background="#5F458E"
+                >
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="-55dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileImageViewId"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/user_icon"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#000000"/>
+
+
+      <!--          <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/cameraIconViewId"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:src="@drawable/ic_photo_camera_black_24dp"
+                    app:civ_border_color="#000000"
+                    app:civ_border_width="2dp" />
+         -->
+
+            </RelativeLayout>
+
+
+
+
+            <LinearLayout
+                android:padding="15dp"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <LinearLayout
+                    android:layout_margin="1dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="3dp"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name : "
+                        android:textColor="#000000"
+                        />
+
+                    <TextView
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nameTvId"
+                        />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_margin="1dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="3dp"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Blood group : "
+                        android:textColor="#000000"
+                        />
+
+                    <TextView
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bloodGTvId"
+                        />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:weightSum="4"
+                    android:layout_margin="1dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="3dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="3.3"
+                        android:layout_height="wrap_content"
+                        android:text="I Want To Donate"
+                        android:textColor="#000000"
+                        />
+
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/donateSwitchId"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.7"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_margin="1dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="3dp"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact : "
+                        android:textColor="#000000"
+                        />
+
+                    <TextView
+                        android:textColor="#000000"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/phoneNumberTvId"
+                        />
+
+                </LinearLayout>
+
+
+
+
+
+                <!--email-->
+                <LinearLayout
+                    android:layout_margin="1dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="3dp"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email : "
+                        android:textColor="#000000"
+                        />
+
+                    <TextView
+                        android:textColor="#000000"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/emailTvId"
+                        />
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_margin="3dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="1dp"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Donation Date : "
+                        android:textColor="#000000"
+                        />
+
+                    <TextView
+                        android:textColor="#000000"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lastDonationDateTvId"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="3dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="1dp"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Area/Village : "
+                        android:textColor="#000000"
+                        />
+
+                    <TextView
+                        android:textColor="#000000"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/villageTvId"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_margin="3dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="1dp"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upazila/University : "
+                        android:textColor="#000000"
+                        />
+
+                    <TextView
+                        android:textColor="#000000"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/upazilaTvId"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="3dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="1dp"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zilla : "
+                        android:textColor="#000000"
+                        />
+
+                    <TextView
+                        android:textColor="#000000"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/zillaTvId"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_margin="3dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="1dp"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status : "
+                        android:textColor="#000000"
+                        />
+
+                    <TextView
+                        android:textColor="#000000"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/statusTvId"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:weightSum="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <!-- my blood request post -->
+                <Button
+                    android:id="@+id/myPostBtnId"
+                    android:text="My Posts"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:background="@drawable/round_bg"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="100dp"
+                    android:layout_height="wrap_content"/>
+
+
+
+                 <Button
+                     android:id="@+id/editProfileBtnId"
+                     android:text="Update"
+                     android:textStyle="bold"
+                     android:textAllCaps="false"
+                     style="@style/Widget.AppCompat.Button.Colored"
+                     android:background="@drawable/round_bg"
+                     android:layout_width="0dp"
+                     android:layout_weight="2"
+                     android:layout_marginBottom="2dp"
+                     android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</FrameLayout>
