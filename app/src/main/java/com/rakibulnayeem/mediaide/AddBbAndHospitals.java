@@ -9,7 +9,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
+
+import com.rakibulnayeem.mediaide.UserFeedbacks.UserFeedback;
 
 public class AddBbAndHospitals extends AppCompatActivity implements View.OnClickListener {
 
@@ -45,7 +46,7 @@ public class AddBbAndHospitals extends AppCompatActivity implements View.OnClick
 
         else if (v == emailBtn)
         {
-            startActivity(new Intent(getApplicationContext(),UserFeedback.class));
+            startActivity(new Intent(getApplicationContext(), UserFeedback.class));
         }
 
 

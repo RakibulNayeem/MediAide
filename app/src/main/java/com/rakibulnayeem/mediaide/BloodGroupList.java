@@ -11,6 +11,9 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.rakibulnayeem.mediaide.Donor.UpdateDonorInfo;
+import com.rakibulnayeem.mediaide.Profile.UpdateProfile;
+
 public class BloodGroupList extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private  String[] bloodGroupNames;
     private ListView listView;

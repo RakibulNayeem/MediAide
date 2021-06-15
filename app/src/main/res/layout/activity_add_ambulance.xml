@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="8dp"
     android:gravity="center"
-    tools:context=".AddAmbulance">
+    tools:context=".Ambulances.AddAmbulance">
 
 
 

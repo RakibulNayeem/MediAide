@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="10dp"
     android:gravity="center"
-    tools:context=".AddBloodBank">
+    tools:context=".BloodBanks.AddBloodBank">
 
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"

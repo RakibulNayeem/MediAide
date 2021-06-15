@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rakibulnayeem.mediaide">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -15,39 +17,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HospitalListAdmin"></activity>
-        <activity android:name=".AddDoctorByAdmin" />
-        <activity android:name=".HospitalList" />
-        <activity android:name=".VerifyPhoneNo_2" />
-        <activity android:name=".PostEdit" />
+        <activity android:name=".Hospital.HospitalListAdmin"></activity>
+        <activity android:name=".Doctor.AddDoctorByAdmin" />
+        <activity android:name=".Hospital.HospitalList" />
+        <activity android:name=".SignUpLogIn.VerifyPhoneNo_2" />
+        <activity android:name=".Posts.PostEdit" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-1372194887865213~2742651593" />
 
-        <activity android:name=".Post" />
-        <activity android:name=".ApproveOrganizationList" />
-        <activity android:name=".ApproveAmbulanceList" />
-        <activity android:name=".DoctorApprove" />
-        <activity android:name=".ApproveDoctorList" />
-        <activity android:name=".HospitalDoctorsProfile" />
-        <activity android:name=".AddDoctorForHospital" />
-        <activity android:name=".HospitalsDoctors" />
-        <activity android:name=".MyPosts" />
-        <activity android:name=".UpdateDonorInfo" />
+        <activity android:name=".Posts.Post" />
+        <activity android:name=".Organization.ApproveOrganizationList" />
+        <activity android:name=".Ambulances.ApproveAmbulanceList" />
+        <activity android:name=".Doctor.DoctorApprove" />
+        <activity android:name=".Doctor.ApproveDoctorList" />
+        <activity android:name=".Hospital.HospitalDoctorsProfile" />
+        <activity android:name=".Hospital.AddDoctorForHospital" />
+        <activity android:name=".Hospital.HospitalsDoctors" />
+        <activity android:name=".Posts.MyPosts" />
+        <activity android:name=".Donor.UpdateDonorInfo" />
         <activity android:name=".DonorYouAddedProfile" />
-        <activity android:name=".DonorYouAdded" />
+        <activity android:name=".Donor.DonorYouAdded" />
         <activity android:name=".AddBbAndHospitals" />
-        <activity android:name=".MyOrganizationAccount" />
-        <activity android:name=".MyAmbulanceAccount" />
-        <activity android:name=".MyDoctorAccount" />
-        <activity android:name=".UpdateProfilePicture" />
+        <activity android:name=".Organization.MyOrganizationAccount" />
+        <activity android:name=".Ambulances.MyAmbulanceAccount" />
+        <activity android:name=".Doctor.MyDoctorAccount" />
+        <activity android:name=".Profile.UpdateProfilePicture" />
         <activity android:name=".BloodGroupList" />
-        <activity android:name=".LoginWithPhone" />
-        <activity android:name=".RegisterWithPhoneNo" />
-        <activity android:name=".VerifyPhoneNo" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".DoctorsProfile" />
+        <activity android:name=".SignUpLogIn.LoginWithPhone" />
+        <activity android:name=".SignUpLogIn.RegisterWithPhoneNo" />
+        <activity android:name=".SignUpLogIn.VerifyPhoneNo" />
+        <activity android:name=".SignUpLogIn.LoginActivity" />
+        <activity android:name=".Doctor.DoctorsProfile" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,32 +57,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HealthTipsDescriptionProfile" />
-        <activity android:name=".AddHealthCare" />
-        <activity android:name=".HealthCare" />
-        <activity android:name=".FactsDescriptionProfile" />
-        <activity android:name=".AddFacts" />
-        <activity android:name=".Facts" />
+        <activity android:name=".HealthCares.HealthTipsDescriptionProfile" />
+        <activity android:name=".HealthCares.AddHealthCare" />
+        <activity android:name=".HealthCares.HealthCare" />
+        <activity android:name=".Fact.FactsDescriptionProfile" />
+        <activity android:name=".Fact.AddFacts" />
+        <activity android:name=".Fact.Facts" />
         <activity android:name=".ZillaList" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".UserFeedback" />
+        <activity android:name=".SignUpLogIn.SignUp" />
+        <activity android:name=".UserFeedbacks.UserFeedback" />
         <activity android:name=".AboutUs" />
-        <activity android:name=".AddOrganizations" />
-        <activity android:name=".Organizations" />
-        <activity android:name=".AddAmbulance" />
-        <activity android:name=".Ambulance" />
-        <activity android:name=".AddDoctor" />
-        <activity android:name=".Doctors" />
-        <activity android:name=".AddHospital" />
-        <activity android:name=".Hospital" />
-        <activity android:name=".UsersProfile" />
-        <activity android:name=".AddBloodBank" />
-        <activity android:name=".BloodBank" />
-        <activity android:name=".AddDonor" />
+        <activity android:name=".Organization.AddOrganizations" />
+        <activity android:name=".Organization.Organizations" />
+        <activity android:name=".Ambulances.AddAmbulance" />
+        <activity android:name=".Ambulances.Ambulance" />
+        <activity android:name=".Doctor.AddDoctor" />
+        <activity android:name=".Doctor.Doctors" />
+        <activity android:name=".Hospital.AddHospital" />
+        <activity android:name=".Hospital.Hospital" />
+        <activity android:name=".Profile.UsersProfile" />
+        <activity android:name=".BloodBanks.AddBloodBank" />
+        <activity android:name=".BloodBanks.BloodBank" />
+        <activity android:name=".Donor.AddDonor" />
         <activity android:name=".ChangePP" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".UpdateProfile" />
-        <activity android:name=".SearchActivity" />
+        <activity android:name=".Profile.UpdateProfile" />
+        <activity android:name=".Donor.SearchActivity" />
     </application>
 
 </manifest>

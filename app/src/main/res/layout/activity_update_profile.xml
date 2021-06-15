@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="#EEEFE2E2"
     android:layout_height="wrap_content"
-    tools:context=".UpdateProfile">
+    tools:context=".Profile.UpdateProfile">
 
 
     <ScrollView

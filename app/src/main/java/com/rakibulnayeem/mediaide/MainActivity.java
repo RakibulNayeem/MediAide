@@ -19,6 +19,10 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.rakibulnayeem.mediaide.Fragments.HomeFragment;
+import com.rakibulnayeem.mediaide.Posts.RequestFragment;
+import com.rakibulnayeem.mediaide.Profile.ProfileFragment;
+import com.rakibulnayeem.mediaide.SignUpLogIn.LoginWithPhone;
 
 import org.jsoup.Jsoup;
 
@@ -167,7 +171,7 @@ public class MainActivity extends AppCompatActivity  {
             FirebaseAuth.getInstance().signOut();
             Toast.makeText(getApplicationContext(),"Sign out successful",Toast.LENGTH_SHORT).show();
             finish();
-            startActivity(new Intent(getApplicationContext(),LoginWithPhone.class));
+            startActivity(new Intent(getApplicationContext(), LoginWithPhone.class));
         }
 
         return super.onOptionsItemSelected(item);

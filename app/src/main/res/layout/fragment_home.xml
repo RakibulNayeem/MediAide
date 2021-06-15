@@ -3,14 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="#EEEFE2E2"
     android:padding="5dp"
-    tools:context=".HomeFragment">
+    tools:context=".Fragments.HomeFragment">
 
 
 
     <ScrollView
+        android:layout_gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -45,6 +47,9 @@
                         android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:clickable="true"
+                        app:cardCornerRadius="15dp"
+                        app:cardUseCompatPadding="false"
+                        android:elevation="5dp"
                         android:foreground="?android:attr/selectableItemBackground">
 
 
@@ -105,6 +110,9 @@
                         android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:clickable="true"
+                        app:cardCornerRadius="15dp"
+                        app:cardUseCompatPadding="false"
+                        android:elevation="5dp"
                         android:foreground="?android:attr/selectableItemBackground">
 
 
@@ -180,6 +188,9 @@
                         android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:clickable="true"
+                        app:cardCornerRadius="15dp"
+                        app:cardUseCompatPadding="false"
+                        android:elevation="5dp"
                         android:foreground="?android:attr/selectableItemBackground">
 
 
@@ -240,6 +251,9 @@
                         android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:clickable="true"
+                        app:cardCornerRadius="15dp"
+                        app:cardUseCompatPadding="false"
+                        android:elevation="5dp"
                         android:foreground="?android:attr/selectableItemBackground">
 
 
@@ -317,6 +331,9 @@
                         android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:clickable="true"
+                        app:cardCornerRadius="15dp"
+                        app:cardUseCompatPadding="false"
+                        android:elevation="5dp"
                         android:foreground="?android:attr/selectableItemBackground">
 
 
@@ -377,6 +394,9 @@
                         android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:clickable="true"
+                        app:cardCornerRadius="15dp"
+                        app:cardUseCompatPadding="false"
+                        android:elevation="5dp"
                         android:foreground="?android:attr/selectableItemBackground">
 
 
@@ -452,6 +472,9 @@
                         android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:clickable="true"
+                        app:cardCornerRadius="15dp"
+                        app:cardUseCompatPadding="false"
+                        android:elevation="5dp"
                         android:foreground="?android:attr/selectableItemBackground">
 
 
@@ -509,6 +532,9 @@
                         android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:clickable="true"
+                        app:cardCornerRadius="15dp"
+                        app:cardUseCompatPadding="false"
+                        android:elevation="5dp"
                         android:foreground="?android:attr/selectableItemBackground">
 
 
@@ -581,6 +607,9 @@
                         android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:clickable="true"
+                        app:cardCornerRadius="15dp"
+                        app:cardUseCompatPadding="false"
+                        android:elevation="5dp"
                         android:foreground="?android:attr/selectableItemBackground">
 
 
@@ -639,6 +668,9 @@
                         android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:clickable="true"
+                        app:cardCornerRadius="15dp"
+                        app:cardUseCompatPadding="false"
+                        android:elevation="5dp"
                         android:foreground="?android:attr/selectableItemBackground">
 
 
@@ -711,6 +743,9 @@
                         android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:clickable="true"
+                        app:cardCornerRadius="15dp"
+                        app:cardUseCompatPadding="false"
+                        android:elevation="5dp"
                         android:foreground="?android:attr/selectableItemBackground">
 
 
@@ -771,6 +806,9 @@
                         android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:clickable="true"
+                        app:cardCornerRadius="15dp"
+                        app:cardUseCompatPadding="false"
+                        android:elevation="5dp"
                         android:foreground="?android:attr/selectableItemBackground">
 
 

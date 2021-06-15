@@ -7,7 +7,7 @@
     android:padding="10dp"
     android:background="#E1EAE4"
     android:orientation="vertical"
-    tools:context=".UserFeedback">
+    tools:context=".UserFeedbacks.UserFeedback">
 
     <LinearLayout
         android:layout_marginTop="100dp"

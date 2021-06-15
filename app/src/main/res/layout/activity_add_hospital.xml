@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="10dp"
     android:gravity="center"
-    tools:context=".AddHospital">
+    tools:context=".Hospital.AddHospital">
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"

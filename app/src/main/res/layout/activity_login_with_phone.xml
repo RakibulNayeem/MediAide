@@ -7,7 +7,7 @@
     android:gravity="center"
     android:background="#E8E5E5"
     android:layout_height="match_parent"
-    tools:context=".LoginWithPhone">
+    tools:context=".SignUpLogIn.LoginWithPhone">
 
     <LinearLayout
         android:background="@android:drawable/dialog_holo_light_frame"

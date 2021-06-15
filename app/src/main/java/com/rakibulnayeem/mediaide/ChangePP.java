@@ -26,6 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.rakibulnayeem.mediaide.Profile.ProfileFragment;
 import com.squareup.picasso.Picasso;
 
 import static java.lang.System.currentTimeMillis;
@@ -157,7 +158,7 @@ public class ChangePP extends AppCompatActivity implements View.OnClickListener 
                         databaseReference.child(uid).setValue(ppUpload);
 
                         finish();
-                        startActivity(new Intent(getApplicationContext(),ProfileFragment.class));
+                        startActivity(new Intent(getApplicationContext(), ProfileFragment.class));
 
 
                     }

@@ -8,6 +8,8 @@ import android.widget.ProgressBar;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.rakibulnayeem.mediaide.SignUpLogIn.LoginWithPhone;
+
 public class SplashScreen extends AppCompatActivity {
 
     private ProgressBar progressBar;
@@ -54,7 +56,7 @@ public class SplashScreen extends AppCompatActivity {
     }
 
     public void startApp(){
-        Intent intent = new Intent(SplashScreen.this,LoginWithPhone.class);
+        Intent intent = new Intent(SplashScreen.this, LoginWithPhone.class);
         startActivity(intent);
         finish();
     }

@@ -16,6 +16,7 @@
         android:title="@string/ambulance_account"
         android:icon="@drawable/add_icon_2"
         app:showAsAction="never"
+
         />
 
     <item
@@ -24,7 +25,7 @@
         app:showAsAction="never"
         />
 
- <!--  <item
+   <item
         android:id="@+id/addAmbulanceByAdminMenuId"
         android:title="Add Ambulance(Admin)"
         app:showAsAction="never"
@@ -35,6 +36,6 @@
         android:id="@+id/approveAmbulanceMenuId"
         android:title="Approve Ambulance"
         app:showAsAction="never"
-        />  -->
+        />
 
 </menu>

@@ -14,6 +14,15 @@ import android.widget.SearchView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.rakibulnayeem.mediaide.Ambulances.Ambulance;
+import com.rakibulnayeem.mediaide.BloodBanks.BloodBank;
+import com.rakibulnayeem.mediaide.Doctor.Doctors;
+import com.rakibulnayeem.mediaide.Donor.SearchActivity;
+import com.rakibulnayeem.mediaide.Hospital.Hospital;
+import com.rakibulnayeem.mediaide.Hospital.HospitalList;
+import com.rakibulnayeem.mediaide.Hospital.HospitalListAdmin;
+import com.rakibulnayeem.mediaide.Organization.Organizations;
+
 public class ZillaList extends AppCompatActivity implements AdapterView.OnItemClickListener{
     private  String[] districtNames;
     private ListView listView;
@@ -54,7 +63,7 @@ public class ZillaList extends AppCompatActivity implements AdapterView.OnItemCl
 
         if (Name.equals("hospital"))
         {
-            Intent intent = new Intent(getApplicationContext(),Hospital.class);
+            Intent intent = new Intent(getApplicationContext(), Hospital.class);
             intent.putExtra("zillaName",value);
             startActivity(intent);
             finish();
@@ -63,7 +72,7 @@ public class ZillaList extends AppCompatActivity implements AdapterView.OnItemCl
 
         else if (Name.equals("hospital_list"))
         {
-            Intent intent = new Intent(getApplicationContext(),HospitalList.class);
+            Intent intent = new Intent(getApplicationContext(), HospitalList.class);
             intent.putExtra("zillaName",value);
             startActivity(intent);
             finish();
@@ -71,7 +80,7 @@ public class ZillaList extends AppCompatActivity implements AdapterView.OnItemCl
 
         else if (Name.equals("hospital_list_admin"))
         {
-            Intent intent = new Intent(getApplicationContext(),HospitalListAdmin.class);
+            Intent intent = new Intent(getApplicationContext(), HospitalListAdmin.class);
             intent.putExtra("zillaName",value);
             startActivity(intent);
             finish();
@@ -80,7 +89,7 @@ public class ZillaList extends AppCompatActivity implements AdapterView.OnItemCl
 
         else if (Name.equals("organizations"))
         {
-            Intent intent = new Intent(getApplicationContext(),Organizations.class);
+            Intent intent = new Intent(getApplicationContext(), Organizations.class);
             intent.putExtra("zillaName",value);
             startActivity(intent);
             finish();
@@ -88,7 +97,7 @@ public class ZillaList extends AppCompatActivity implements AdapterView.OnItemCl
 
         else if (Name.equals("blood_bank"))
         {
-            Intent intent = new Intent(getApplicationContext(),BloodBank.class);
+            Intent intent = new Intent(getApplicationContext(), BloodBank.class);
             intent.putExtra("zillaName",value);
             startActivity(intent);
             finish();
@@ -96,7 +105,7 @@ public class ZillaList extends AppCompatActivity implements AdapterView.OnItemCl
 
         else if (Name.equals("donor_search"))
         {
-            Intent intent = new Intent(getApplicationContext(),SearchActivity.class);
+            Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
             intent.putExtra("zillaName",value);
             startActivity(intent);
             finish();
@@ -104,7 +113,7 @@ public class ZillaList extends AppCompatActivity implements AdapterView.OnItemCl
 
         else if (Name.equals("doctors"))
         {
-            Intent intent = new Intent(getApplicationContext(),Doctors.class);
+            Intent intent = new Intent(getApplicationContext(), Doctors.class);
             intent.putExtra("zillaName",value);
             startActivity(intent);
             finish();
@@ -113,7 +122,7 @@ public class ZillaList extends AppCompatActivity implements AdapterView.OnItemCl
 
         else if (Name.equals("ambulance"))
         {
-            Intent intent = new Intent(getApplicationContext(),Ambulance.class);
+            Intent intent = new Intent(getApplicationContext(), Ambulance.class);
             intent.putExtra("zillaName",value);
             startActivity(intent);
             finish();

@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="#E8E5E5"
     android:gravity="center"
-    tools:context=".VerifyPhoneNo_2">
+    tools:context=".SignUpLogIn.VerifyPhoneNo_2">
 
     <LinearLayout
         android:gravity="center"

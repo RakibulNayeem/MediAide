@@ -10,6 +10,8 @@ import android.widget.ImageButton;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.rakibulnayeem.mediaide.UserFeedbacks.UserFeedback;
+
 public class AboutUs extends AppCompatActivity implements View.OnClickListener {
 
     private ImageButton facebookLinkIv,emailLinkIv,facebookPageBtn;
@@ -57,7 +59,7 @@ public class AboutUs extends AppCompatActivity implements View.OnClickListener {
 
         else if (v == emailLinkIv)
         {
-            startActivity(new Intent(getApplicationContext(),UserFeedback.class));
+            startActivity(new Intent(getApplicationContext(), UserFeedback.class));
         }
 
 
