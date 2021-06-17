@@ -19,6 +19,11 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import org.jsoup.Jsoup;
 
@@ -29,6 +34,7 @@ public class MainActivity extends AppCompatActivity  {
 
     ActionBar actionBar;
     String sLatestVersion,sCurrentVersion;
+    String appLink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +62,28 @@ public class MainActivity extends AppCompatActivity  {
         new GetLatestVersion().execute();
 
 
+        ///app link for share the app
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("1_app_link");
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String app_link= ""+dataSnapshot.child("app_link_child").getValue();
+
+                //set value
+                appLink = app_link;
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(getApplicationContext(),"Failed to load info",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
+
 
 
 
@@ -168,6 +195,21 @@ public class MainActivity extends AppCompatActivity  {
             Toast.makeText(getApplicationContext(),"Sign out successful",Toast.LENGTH_SHORT).show();
             finish();
             startActivity(new Intent(getApplicationContext(),LoginWithPhone.class));
+        }
+        if (item.getItemId()==R.id.share){
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            String subject = "BloodPlus";
+            String body = "We are helping you to collect blood and save life.\n"+appLink;
+
+            intent.putExtra(Intent.EXTRA_SUBJECT,subject);
+            intent.putExtra(Intent.EXTRA_TEXT,body);
+            startActivity(Intent.createChooser(intent,"share with"));
+        }
+        if (item.getItemId()==R.id.rate){
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://play.google.com/store/apps/details?id=" + "com.rakibulnayeem.mediaide")));
+
         }
 
         return super.onOptionsItemSelected(item);
