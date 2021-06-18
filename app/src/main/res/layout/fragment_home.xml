@@ -856,6 +856,7 @@
             </LinearLayout>
 
             <TextView
+                android:visibility="gone"
                 android:id="@+id/shareAppTvId"
                 android:layout_marginBottom="10dp"
                 android:layout_gravity="center_horizontal"
@@ -873,6 +874,7 @@
 
 
             <TextView
+                android:visibility="gone"
                 android:id="@+id/rateAppTvId"
                 android:layout_marginBottom="10dp"
                 android:layout_gravity="center_horizontal"
