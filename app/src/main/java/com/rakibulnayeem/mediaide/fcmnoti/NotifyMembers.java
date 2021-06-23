@@ -15,87 +15,93 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
-import com.niharon.classmanager.model.Classs;
-import com.niharon.classmanager.model.Member;
 
 import java.util.ArrayList;
 
 public class NotifyMembers {
-    public static void sendNotification(String title, String message, String roomid, String classid, String day, Context context, Activity activity)
-    {
-        try {
-            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Rooms").child(roomid).child("Schedule").child(day).child(classid);
-            databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    Classs classs = snapshot.getValue(Classs.class);
-                    ArrayList<String> liste = new ArrayList<>();
-                    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Rooms").child(roomid).child("Members");
-                    databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            for (DataSnapshot dataSnapshot:snapshot.getChildren()
-                            ) {
-                                Member member = dataSnapshot.getValue(Member.class);
-                                assert member != null;
-                                if (!member.getId().equals(FirebaseAuth.getInstance().getCurrentUser().getUid()))
-                                {
-                                    if (!member.getRole().equals("teacher"))
-                                    {
-                                        liste.add(member.getId());
-                                    }
-                                    else {
-                                        assert classs != null;
-                                        if (member.getEmail().equals(classs.getClassteacheremail())) {
-                                            liste.add(member.getId());
-                                        }
-                                    }
-                                }
-                            }
-                            String[] lists = new String[liste.size()];
-                            for (int i = 0; i < liste.size(); i++) {
-                                lists[i] = liste.get(i);
-                            }
 
-                            for (String userid:lists
-                            ) {
-                                try{
-                                    FirebaseDatabase.getInstance().getReference().child("Tokens").child(userid).child("token").addListenerForSingleValueEvent(new ValueEventListener() {
-                                        @Override
-                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+    //remove comment
 
-                                            try
-                                            {
-                                                String usertoken=dataSnapshot.getValue(String.class);
-                                                FcmNotificationsSender notificationsSender = new FcmNotificationsSender(usertoken,title,message,context,activity);
-                                                notificationsSender.SendNotifications();
-                                            }
-                                            catch (Exception ignored){}
-                                        }
+    //AZ
 
-                                        @Override
-                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+    //Important
 
-                                        }
-                                    });
-                                }catch (Exception ignored){}
-                            }
-                        }
 
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
-            });
-        }catch (Exception ignored){}
-    }
+//    public static void sendNotification(String title, String message, String roomid, String classid, String day, Context context, Activity activity)
+//    {
+//        try {
+//            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Rooms").child(roomid).child("Schedule").child(day).child(classid);
+//            databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+//                @Override
+//                public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                    Classs classs = snapshot.getValue(Classs.class);
+//                    ArrayList<String> liste = new ArrayList<>();
+//                    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Rooms").child(roomid).child("Members");
+//                    databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+//                        @Override
+//                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                            for (DataSnapshot dataSnapshot:snapshot.getChildren()
+//                            ) {
+//                                Member member = dataSnapshot.getValue(Member.class);
+//                                assert member != null;
+//                                if (!member.getId().equals(FirebaseAuth.getInstance().getCurrentUser().getUid()))
+//                                {
+//                                    if (!member.getRole().equals("teacher"))
+//                                    {
+//                                        liste.add(member.getId());
+//                                    }
+//                                    else {
+//                                        assert classs != null;
+//                                        if (member.getEmail().equals(classs.getClassteacheremail())) {
+//                                            liste.add(member.getId());
+//                                        }
+//                                    }
+//                                }
+//                            }
+//                            String[] lists = new String[liste.size()];
+//                            for (int i = 0; i < liste.size(); i++) {
+//                                lists[i] = liste.get(i);
+//                            }
+//
+//                            for (String userid:lists
+//                            ) {
+//                                try{
+//                                    FirebaseDatabase.getInstance().getReference().child("Tokens").child(userid).child("token").addListenerForSingleValueEvent(new ValueEventListener() {
+//                                        @Override
+//                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//
+//                                            try
+//                                            {
+//                                                String usertoken=dataSnapshot.getValue(String.class);
+//                                                FcmNotificationsSender notificationsSender = new FcmNotificationsSender(usertoken,title,message,context,activity);
+//                                                notificationsSender.SendNotifications();
+//                                            }
+//                                            catch (Exception ignored){}
+//                                        }
+//
+//                                        @Override
+//                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                                        }
+//                                    });
+//                                }catch (Exception ignored){}
+//                            }
+//                        }
+//
+//                        @Override
+//                        public void onCancelled(@NonNull DatabaseError error) {
+//
+//                        }
+//                    });
+//                }
+//
+//                @Override
+//                public void onCancelled(@NonNull DatabaseError error) {
+//
+//                }
+//            });
+//        }catch (Exception ignored){}
+//    }
 
     static public void UpdateToken(){
         FirebaseUser firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
