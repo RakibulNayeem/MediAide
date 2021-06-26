@@ -23,6 +23,7 @@ import com.rakibulnayeem.mediaide.Fragments.HomeFragment;
 import com.rakibulnayeem.mediaide.Posts.RequestFragment;
 import com.rakibulnayeem.mediaide.Profile.ProfileFragment;
 import com.rakibulnayeem.mediaide.SignUpLogIn.LoginWithPhone;
+import com.rakibulnayeem.mediaide.fcmnoti.NotifyMembers;
 
 import org.jsoup.Jsoup;
 
@@ -221,5 +222,9 @@ public class MainActivity extends AppCompatActivity  {
             };
 
 
-
+    @Override
+    protected void onStart() {
+        super.onStart();
+//        NotifyMembers.UpdateToken();
+    }
 }
