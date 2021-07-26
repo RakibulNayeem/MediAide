@@ -93,7 +93,7 @@ public class LoginWithPhone extends AppCompatActivity {
                 {
 
 
-                    Intent intent = new Intent(getApplicationContext(), VerifyPhoneNo.class);
+                    Intent intent = new Intent(getApplicationContext(), VerifyPhoneNo_3.class);
                     intent.putExtra("phone_number",phone_number);
                     startActivity(intent);
                     finish();

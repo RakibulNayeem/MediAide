@@ -254,14 +254,14 @@ public class DoctorApprove extends AppCompatActivity implements View.OnClickList
         String key = databaseReference2.push().getKey();
 
         DoctorApproveAdapter adapter = new DoctorApproveAdapter(uid,key,name,hospital_name,hospital_id,degree,speciality,fee,chamber_address,zilla,phone_number,active_day,open_time,ampm,close_time,ampm2,imageUri);
-        databaseReference2.child(key).setValue(adapter);
+        databaseReference2.child(uid).setValue(adapter);
 
         progressBar.setVisibility(View.GONE);
         Toast.makeText(getApplicationContext(),"Information uploaded",Toast.LENGTH_LONG).show();
 
         DeleteInfo();
         finish();
-        startActivity(new Intent(getApplicationContext(), ApproveDoctorList.class));
+       // startActivity(new Intent(getApplicationContext(), ApproveDoctorList.class));
 
     }
 

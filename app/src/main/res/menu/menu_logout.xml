@@ -7,7 +7,7 @@
         android:title="Share this app"
         android:id="@+id/share"
         app:showAsAction="always"
-        android:icon="@drawable/ic_baseline_share_24"
+        android:icon="@drawable/share_green_24"
         />
 
     <item
@@ -15,13 +15,16 @@
         android:title="Rate us on google play"
         android:id="@+id/rate"
         app:showAsAction="always"
-        android:icon="@drawable/ic_baseline_star_rate_24"
+        android:icon="@drawable/playstore_icon"
         />
 
 
     <item
 
         android:title="Sign Out"
+        android:icon="@drawable/ic_signout_24"
+        android:orderInCategory="100"
+        app:showAsAction="never"
         android:id="@+id/signOutMenuId"
         />
 

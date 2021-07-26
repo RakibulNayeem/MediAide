@@ -54,12 +54,33 @@ public class AmbulanceAdapter extends RecyclerView.Adapter<AmbulanceAdapter.MyVi
 
         //set data
         holder.nameTv.setText(name);
-        holder.driverNameTv.setText(driver_name);
-        holder.serviceTypeTv.setText(service_type);
         holder.addressTv.setText(address);
         holder.phoneNumberTv.setText(phone_number);
         holder.zillaTv.setText(zilla);
         holder.vehicleTv.setText(vehicle_no);
+
+        if(!driver_name.equals(""))
+        {
+            holder.driverNameTitleTv.setVisibility(View.VISIBLE);
+            holder.driverNameTv.setVisibility(View.VISIBLE);
+            holder.driverNameTv.setText(driver_name);
+        }
+        else
+        {
+            holder.driverNameTitleTv.setVisibility(View.GONE);
+            holder.driverNameTv.setVisibility(View.GONE);
+        }
+
+
+        if(!service_type.equals(""))
+        {
+            holder.serviceTypeTv.setVisibility(View.VISIBLE);
+            holder.serviceTypeTv.setText(service_type);
+        }
+        else
+        {
+            holder.serviceTypeTv.setVisibility(View.GONE);
+        }
 
 
         //handle item click(if clicked on item)

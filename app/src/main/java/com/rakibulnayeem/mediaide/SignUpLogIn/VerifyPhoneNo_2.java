@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -23,7 +25,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.FirebaseUserMetadata;
 import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -34,12 +38,14 @@ import com.google.firebase.database.ValueEventListener;
 import com.rakibulnayeem.mediaide.MainActivity;
 import com.rakibulnayeem.mediaide.R;
 
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 public class VerifyPhoneNo_2 extends AppCompatActivity implements View.OnClickListener {
 
     EditText otp;
-    TextView resendOtpBtn;
+    TextView resendOtpBtn, countDownTimerTv;
+    CountDownTimer countDownTimer;
     Button verifyBtn;
     String no;
     String phoneNumber;
@@ -49,6 +55,7 @@ public class VerifyPhoneNo_2 extends AppCompatActivity implements View.OnClickLi
     private PhoneAuthProvider.ForceResendingToken resendToken;
     private ProgressBar progressBar;
     DatabaseReference databaseReference;
+    FirebaseUserMetadata metadata;
 
 
     @Override
@@ -64,8 +71,9 @@ public class VerifyPhoneNo_2 extends AppCompatActivity implements View.OnClickLi
         actionBar.hide();
 
         mAuth = FirebaseAuth.getInstance();
-        otp = (EditText) findViewById(R.id.otpEtId);
-        progressBar = findViewById(R.id.progressBarVerifyId2);
+        otp = findViewById(R.id.otpEtId);
+        countDownTimerTv = findViewById(R.id.countDownTimerTvId);
+        progressBar = findViewById(R.id.progressBarVerifyId);
         databaseReference = FirebaseDatabase.getInstance().getReference("persons_info");
 
         no = getIntent().getStringExtra("phone_number");
@@ -77,6 +85,38 @@ public class VerifyPhoneNo_2 extends AppCompatActivity implements View.OnClickLi
 
         verifyBtn = (Button) findViewById(R.id.verifyOTPBtnId);
         resendOtpBtn = findViewById(R.id.resendOtpId);
+
+        countDownTimer = new CountDownTimer(60000,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+
+                countDownTimerTv.setVisibility(View.VISIBLE);
+                resendOtpBtn.setEnabled(false);
+                resendOtpBtn.setTextColor(Color.parseColor("#9e9a99"));
+                //when tick
+                //convert millisecond to minute and second
+                //countDownTimerTv.setText(millisUntilFinished/1000 + " sec left");
+                String sDuration = String.format(Locale.ENGLISH, "%02d : %02d",
+                        TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)
+                        , TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) -
+                                TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)));
+
+                countDownTimerTv.setText(sDuration);
+            }
+
+            @Override
+            public void onFinish() {
+                countDownTimerTv.setVisibility(View.GONE);
+                resendOtpBtn.setTextColor(Color.parseColor("#DD4E4E"));
+                resendOtpBtn.setEnabled(true);
+            }
+        };
+
+
+
+        countDownTimer.start();
+
+
 
         verifyBtn.setOnClickListener(this);
         resendOtpBtn.setOnClickListener(this);
@@ -105,25 +145,47 @@ public class VerifyPhoneNo_2 extends AppCompatActivity implements View.OnClickLi
         else if(v == resendOtpBtn)
         {
             Toast.makeText(getApplicationContext(),"Code again sent  to +88"+no,Toast.LENGTH_SHORT).show();
-            PhoneAuthProvider.getInstance().verifyPhoneNumber(
+          /*  PhoneAuthProvider.getInstance().verifyPhoneNumber(
                     "+88"+no,     // Phone number to verify
                     60  ,               // Timeout duration
                     TimeUnit.SECONDS,   // Unit of timeout
                     (Activity) TaskExecutors.MAIN_THREAD,               // Activity (for callback binding)
                     mCallbacks,         // OnVerificationStateChangedCallbacks
-                    resendToken);             // Force Resending Token from callbacks
+                    resendToken);// Force Resending Token from callbacks
+            */
+
+
+            PhoneAuthOptions options = PhoneAuthOptions.newBuilder(mAuth)
+                    .setPhoneNumber("+88" +phoneNumber) // Phone number to verify
+                    .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
+                    .setActivity(this) // Activity (for callback binding)
+                    .setCallbacks(mCallbacks) // OnVerificationStateChangedCallbacks
+                    .build();
+            PhoneAuthProvider.verifyPhoneNumber(options);
+
+            countDownTimer.start();
         }
 
     }
 
     private void sendVerificationCode(String no) {
         Toast.makeText(getApplicationContext(),"Verification(OTP) code sent to +88"+no,Toast.LENGTH_SHORT).show();
-        PhoneAuthProvider.getInstance().verifyPhoneNumber(
+      /*  PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 "+88" + no,
                 60,
                 TimeUnit.SECONDS,
                 (Activity) TaskExecutors.MAIN_THREAD,
-                mCallbacks);
+                mCallbacks); */
+
+
+        PhoneAuthOptions options = PhoneAuthOptions.newBuilder(mAuth)
+                .setPhoneNumber("+88" +phoneNumber) // Phone number to verify
+                .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
+                .setActivity(this) // Activity (for callback binding)
+                .setCallbacks(mCallbacks) // OnVerificationStateChangedCallbacks
+                .build();
+        PhoneAuthProvider.verifyPhoneNumber(options);
+
     }
 
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
@@ -173,7 +235,7 @@ public class VerifyPhoneNo_2 extends AppCompatActivity implements View.OnClickLi
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-
+                            //verification successful we will start the profile activity
                             //verify old and new user
 
                             Query query = databaseReference.orderByChild("phone_number").equalTo("+88" + no);
@@ -183,17 +245,17 @@ public class VerifyPhoneNo_2 extends AppCompatActivity implements View.OnClickLi
                                     //check until required data get
                                     if (dataSnapshot.exists()) {
                                         //add the username
-                                        finish();
                                         Toast.makeText(VerifyPhoneNo_2.this, "Welcome Back!", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                         startActivity(intent);
+                                        finish();
 
                                     }
                                     else
                                     {
-                                        finish();
-                                        Toast.makeText(VerifyPhoneNo_2.this, "Welcome to BloodPlus!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(VerifyPhoneNo_2.this, "Welcome to Foodix!", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(getApplicationContext(), SignUp.class));
+                                        finish();
                                     }
                                 }
 
@@ -205,25 +267,41 @@ public class VerifyPhoneNo_2 extends AppCompatActivity implements View.OnClickLi
                             });
 
 
+
+
+
+
+
+
+
+
                         } else {
 
                             //verification unsuccessful.. display an error message
-                            //here manage the exceptions and show relevant information to user
-                            progressBar.setVisibility(View.GONE);
+                            showInfoToUser(task);
 
-                            if (task.getException() instanceof FirebaseAuthInvalidCredentialsException){
-                                //invalid phone /otp
-                                otp.setError("Wrong code!");
-                                otp.requestFocus();
-                                return;
-                            }
-                            else {
-                                Toast.makeText(getApplicationContext(),"Register is unsuccessful",Toast.LENGTH_LONG).show();
-                            }
 
                         }
                     }
                 });
+    }
+
+
+    private void showInfoToUser(Task<AuthResult> task) {
+
+        //here manage the exceptions and show relevant information to user
+        progressBar.setVisibility(View.GONE);
+
+        if (task.getException() instanceof FirebaseAuthInvalidCredentialsException){
+            //invalid phone /otp
+            otp.setError("Invalid code.");
+            otp.requestFocus();
+            return;
+        }
+        else {
+            Toast.makeText(getApplicationContext(),"Register is unsuccessful",Toast.LENGTH_LONG).show();
+        }
+
     }
 
 

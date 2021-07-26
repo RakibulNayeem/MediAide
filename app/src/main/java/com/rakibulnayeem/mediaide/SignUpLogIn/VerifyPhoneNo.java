@@ -157,7 +157,7 @@ public class VerifyPhoneNo extends AppCompatActivity implements View.OnClickList
     }
 
     private void sendVerificationCode(String no) {
-        Toast.makeText(getApplicationContext(),"Verification(OTP) code sent to +88"+no,Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Verification(OTP) code sent to +88"+no,Toast.LENGTH_SHORT).show();
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 "+88" + no,
                 60,
@@ -165,7 +165,6 @@ public class VerifyPhoneNo extends AppCompatActivity implements View.OnClickList
                 (Activity) TaskExecutors.MAIN_THREAD,
                 mCallbacks);
     }
-
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
         @Override
         public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {

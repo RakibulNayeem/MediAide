@@ -248,7 +248,7 @@ public class AddDoctor extends AppCompatActivity implements View.OnClickListener
         String key = databaseReference.push().getKey();
 
         AddDoctorAdapter adapter = new AddDoctorAdapter(uid,key,name,hospital_name,hospital_id,degree,speciality,fee,chamber_address,zilla,phone_number,active_day,time,ampm,time2,ampm2,imageUri);
-        databaseReference.child(key).setValue(adapter);
+        databaseReference.child(uid).setValue(adapter);
 
         progressBar.setVisibility(View.GONE);
         Toast.makeText(getApplicationContext(),"Your information uploaded.It may take few hours for verification!",Toast.LENGTH_LONG).show();

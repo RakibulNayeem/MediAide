@@ -1,9 +1,11 @@
 package com.rakibulnayeem.mediaide.Profile;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -32,6 +34,9 @@ import com.google.firebase.storage.UploadTask;
 import com.rakibulnayeem.mediaide.PhotoUpload;
 import com.rakibulnayeem.mediaide.R;
 import com.squareup.picasso.Picasso;
+
+import java.io.ByteArrayOutputStream;
+import java.util.HashMap;
 
 import static java.lang.System.currentTimeMillis;
 
@@ -163,16 +168,16 @@ public class UpdateProfilePicture extends AppCompatActivity implements View.OnCl
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode)
-        {
-            case PERMISSION_CODE:{
-                if (grantResults.length >0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                   //permission was granted
-                   pickImageFromGallery();
-                }
-                else {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        switch (requestCode) {
+            case PERMISSION_CODE: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    //permission was granted
+                    pickImageFromGallery();
+                } else {
                     //permission was denied
-                    Toast.makeText(getApplicationContext(),"Permission denied",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Permission denied", Toast.LENGTH_SHORT).show();
                 }
             }
         }
@@ -248,7 +253,7 @@ public class UpdateProfilePicture extends AppCompatActivity implements View.OnCl
 
 
     private void Doctor_profile_picture() {
-
+/*
         progressBar.setVisibility(View.VISIBLE);
         StorageReference ref = sRefDoctor.child(currentTimeMillis()+"."+getFileExtension(imageUri));
 
@@ -278,6 +283,57 @@ public class UpdateProfilePicture extends AppCompatActivity implements View.OnCl
                         Toast.makeText(getApplicationContext(),"Image upload failed",Toast.LENGTH_SHORT).show();
                     }
                 });
+
+        */
+
+
+
+        try {
+
+            final StorageReference ref = sRefDoctor.child(uid + "." + getFileExtension(imageUri));
+            final ProgressDialog progressDialog = new ProgressDialog(UpdateProfilePicture.this);
+            progressDialog.setMessage("Uploading");
+            progressDialog.show();
+
+
+
+            imageView.setDrawingCacheEnabled(true);
+            imageView.buildDrawingCache();
+            Bitmap bitmap = imageView.getDrawingCache();
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 80, baos);
+            byte[] data = baos.toByteArray();
+
+            UploadTask uploadTask = ref.putBytes(data);
+            uploadTask.addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    // Handle unsuccessful uploads
+                    progressDialog.dismiss();
+                    Toast.makeText(getApplicationContext(),"Image upload failed",Toast.LENGTH_SHORT).show();
+                }
+            }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
+                    Toast.makeText(getApplicationContext(),"Image uploaded successfully",Toast.LENGTH_SHORT).show();
+
+                    Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
+
+                    while (!uriTask.isSuccessful());
+                    Uri downloadUri = uriTask.getResult();
+                    dRefDoctor.child(uid).child("imageUri").setValue(downloadUri.toString());
+                    progressDialog.dismiss();
+                    finish();
+                }
+            });
+
+
+        }catch (Exception e)
+        {
+            //Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"User information updated successfully",Toast.LENGTH_SHORT).show();
+        }
     }
 
 

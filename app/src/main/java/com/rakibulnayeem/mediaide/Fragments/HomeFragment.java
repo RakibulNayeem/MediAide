@@ -39,6 +39,7 @@ import com.rakibulnayeem.mediaide.Donor.AddDonor;
 import com.rakibulnayeem.mediaide.Donor.SearchActivity;
 import com.rakibulnayeem.mediaide.Fact.Facts;
 import com.rakibulnayeem.mediaide.HealthCares.HealthCare;
+import com.rakibulnayeem.mediaide.Hospital.Hospital;
 import com.rakibulnayeem.mediaide.Hospital.HospitalList;
 import com.rakibulnayeem.mediaide.Organization.Organizations;
 import com.rakibulnayeem.mediaide.Posts.Post;
@@ -117,7 +118,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             shareAppTv.setOnClickListener(this);
             rateAppTv.setOnClickListener(this);
 
-        //    getLocation();
+         //   getLocation();
 
 
 
@@ -171,7 +172,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.hospitalCardViewId :
-                Intent intent3 = new Intent(getContext(), HospitalList.class);
+                Intent intent3 = new Intent(getContext(), Hospital.class);
                 intent3.putExtra("zillaName", Zilla);
                 startActivity(intent3);
                 break;
@@ -239,7 +240,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     private void getLocation() {
         //check permission
-        if (ActivityCompat.checkSelfPermission(Objects.requireNonNull(getContext()), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
+        if (ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
         {
             //when permission granted
             fusedLocationProviderClient.getLastLocation()
@@ -260,7 +261,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
                                     //set location on zillaTextView
                                     Zilla =  addresses.get(0).getLocality();
-                                    Toast.makeText(getContext(),"Zilla : "+Zilla,Toast.LENGTH_SHORT).show();
+                                  //  Toast.makeText(getContext(),"Zilla : "+Zilla,Toast.LENGTH_SHORT).show();
 
                                 } catch (IOException e) {
                                     e.printStackTrace();
