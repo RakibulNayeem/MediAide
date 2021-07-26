@@ -83,7 +83,7 @@
         <activity android:name=".ChangePP" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Profile.UpdateProfile" />
-        <activity android:name=".Donor.SearchActivity" />
+        <activity android:name=".Donor.BloodDonorActivity" />
     </application>
 
 </manifest>

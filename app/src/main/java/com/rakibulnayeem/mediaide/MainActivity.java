@@ -214,7 +214,7 @@ public class MainActivity extends AppCompatActivity  {
                         case R.id.nav_request :
                             //fragment transaction
 
-                            actionBar.setTitle("Request");//change action bar title
+                            actionBar.setTitle("Blood Request");//change action bar title
                             RequestFragment requestFragment = new RequestFragment();
                             FragmentTransaction ft2 = getSupportFragmentManager().beginTransaction();
                             ft2.replace(R.id.content,requestFragment,"");

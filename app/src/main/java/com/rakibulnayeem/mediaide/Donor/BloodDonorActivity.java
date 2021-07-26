@@ -35,12 +35,12 @@ import com.rakibulnayeem.mediaide.ZillaList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchActivity extends AppCompatActivity implements View.OnClickListener {
+public class BloodDonorActivity extends AppCompatActivity implements View.OnClickListener {
 
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
     private RecyclerView recyclerView;
-    SearchAdapter searchAdapter;
+    BloodDonorAdapter bloodDonorAdapter;
     private List<SignUpAdapter> adapterList;
     DatabaseReference databaseReference,databaseReference2;
     private ProgressBar progressBar;
@@ -57,8 +57,8 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);
-        this.setTitle("Search Donor");
+        setContentView(R.layout.activity_blood_donor);
+        this.setTitle("Blood Donor");
 
         //adding back button to the tool bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -142,10 +142,10 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
 
                     }
 
-                    searchAdapter = new SearchAdapter(SearchActivity.this, adapterList);
+                    bloodDonorAdapter = new BloodDonorAdapter(BloodDonorActivity.this, adapterList);
 
-                    searchAdapter.notifyDataSetChanged();
-                    recyclerView.setAdapter(searchAdapter);
+                    bloodDonorAdapter.notifyDataSetChanged();
+                    recyclerView.setAdapter(bloodDonorAdapter);
 
                     progressBar.setVisibility(View.GONE);
 
@@ -184,10 +184,10 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
 
                     }
 
-                    searchAdapter = new SearchAdapter(SearchActivity.this, adapterList);
+                    bloodDonorAdapter = new BloodDonorAdapter(BloodDonorActivity.this, adapterList);
 
-                    searchAdapter.notifyDataSetChanged();
-                    recyclerView.setAdapter(searchAdapter);
+                    bloodDonorAdapter.notifyDataSetChanged();
+                    recyclerView.setAdapter(bloodDonorAdapter);
 
                     progressBar.setVisibility(View.GONE);
 
@@ -311,11 +311,11 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
 
                     }
 
-                    searchAdapter = new SearchAdapter(SearchActivity.this, adapterList);
+                    bloodDonorAdapter = new BloodDonorAdapter(BloodDonorActivity.this, adapterList);
 
                     //refresh adapter
-                    searchAdapter.notifyDataSetChanged();
-                    recyclerView.setAdapter(searchAdapter);
+                    bloodDonorAdapter.notifyDataSetChanged();
+                    recyclerView.setAdapter(bloodDonorAdapter);
 
                     progressBar.setVisibility(View.GONE);
 
@@ -355,11 +355,11 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
 
                     }
 
-                    searchAdapter = new SearchAdapter(SearchActivity.this, adapterList);
+                    bloodDonorAdapter = new BloodDonorAdapter(BloodDonorActivity.this, adapterList);
 
                     //refresh adapter
-                    searchAdapter.notifyDataSetChanged();
-                    recyclerView.setAdapter(searchAdapter);
+                    bloodDonorAdapter.notifyDataSetChanged();
+                    recyclerView.setAdapter(bloodDonorAdapter);
 
                     progressBar.setVisibility(View.GONE);
 

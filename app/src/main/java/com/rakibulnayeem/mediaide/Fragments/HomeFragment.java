@@ -7,7 +7,6 @@ import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,11 +35,10 @@ import com.rakibulnayeem.mediaide.Ambulances.Ambulance;
 import com.rakibulnayeem.mediaide.BloodBanks.BloodBank;
 import com.rakibulnayeem.mediaide.Doctor.Doctors;
 import com.rakibulnayeem.mediaide.Donor.AddDonor;
-import com.rakibulnayeem.mediaide.Donor.SearchActivity;
+import com.rakibulnayeem.mediaide.Donor.BloodDonorActivity;
 import com.rakibulnayeem.mediaide.Fact.Facts;
 import com.rakibulnayeem.mediaide.HealthCares.HealthCare;
 import com.rakibulnayeem.mediaide.Hospital.Hospital;
-import com.rakibulnayeem.mediaide.Hospital.HospitalList;
 import com.rakibulnayeem.mediaide.Organization.Organizations;
 import com.rakibulnayeem.mediaide.Posts.Post;
 import com.rakibulnayeem.mediaide.R;
@@ -49,7 +47,6 @@ import com.rakibulnayeem.mediaide.UserFeedbacks.UserFeedback;
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
-import java.util.Objects;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
@@ -155,7 +152,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         switch (v.getId())
         {
             case R.id.searchCardViewId :
-                Intent intent = new Intent(getContext(), SearchActivity.class);
+                Intent intent = new Intent(getContext(), BloodDonorActivity.class);
                 intent.putExtra("zillaName", Zilla);
                 startActivity(intent);
                 break;

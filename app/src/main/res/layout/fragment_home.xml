@@ -64,14 +64,14 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_width="46dp"
                                 android:layout_height="46dp"
-                                android:src="@drawable/search_icon"
+                                android:src="@drawable/blood_donor"
                                 />
                             <TextView
                                 android:textAlignment="center"
                                 android:padding="5dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/search"
+                                android:text="@string/blood_donor"
                                 android:textStyle="bold"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                                 />

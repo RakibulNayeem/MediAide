@@ -17,7 +17,7 @@ import com.rakibulnayeem.mediaide.Profile.UsersProfile;
 
 import java.util.List;
 
-public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHolder> {
+public class BloodDonorAdapter extends RecyclerView.Adapter<BloodDonorAdapter.MyViewHolder> {
 
 
     private Context context;
@@ -28,7 +28,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
     String current_uid;
     DatabaseReference clickDataRef;
 
-    public SearchAdapter(Context context, List<SignUpAdapter> uploadList) {
+    public BloodDonorAdapter(Context context, List<SignUpAdapter> uploadList) {
         this.context = context;
         this.uploadList = uploadList;
     }
