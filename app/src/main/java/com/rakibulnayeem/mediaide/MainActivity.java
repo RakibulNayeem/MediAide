@@ -173,6 +173,23 @@ public class MainActivity extends AppCompatActivity  {
             finish();
             startActivity(new Intent(getApplicationContext(), LoginWithPhone.class));
         }
+        else if(item.getItemId() == R.id.shareMenuId)
+        {
+            Intent intent7 = new Intent(Intent.ACTION_SEND);
+            intent7.setType("text/plain");
+            String subject = "BloodPlus";
+            String body = "We are helping you to collect blood and save life.\n" + "https://play.google.com/store/apps/details?id=com.rakibulnayeem.mediaide";
+
+            intent7.putExtra(Intent.EXTRA_SUBJECT,subject);
+            intent7.putExtra(Intent.EXTRA_TEXT,body);
+            startActivity(Intent.createChooser(intent7,"share with"));
+        }
+
+        else if (item.getItemId() == R.id.rateMenuId)
+        {
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://play.google.com/store/apps/details?id=" + "com.rakibulnayeem.mediaide")));
+        }
 
         return super.onOptionsItemSelected(item);
     }

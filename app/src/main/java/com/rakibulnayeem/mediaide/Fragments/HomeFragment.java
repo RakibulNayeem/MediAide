@@ -216,7 +216,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 startActivity(new Intent(getContext(), HealthCare.class));
                 break;
 
-            case R.id.shareAppTvId :
+          /*  case R.id.shareAppTvId :
                 Intent intent7 = new Intent(Intent.ACTION_SEND);
                 intent7.setType("text/plain");
                 String subject = "BloodPlus";
@@ -231,6 +231,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             case R.id.rateAppTvId :
                 startActivity(new Intent(Intent.ACTION_VIEW,
                         Uri.parse("https://play.google.com/store/apps/details?id=" + "com.rakibulnayeem.mediaide")));
+
+           */
 
 
         }
