@@ -50,6 +50,7 @@ public class HospitalsDoctorsAdapter extends RecyclerView.Adapter<HospitalsDocto
         final  String uid = adapterList.get(position).getUid();
 
 
+
         //set data
         holder.nameTv.setText(name);
         holder.chamberAddressTv.setText(address);
@@ -61,7 +62,20 @@ public class HospitalsDoctorsAdapter extends RecyclerView.Adapter<HospitalsDocto
             holder.specialityTv.setVisibility(View.GONE);
         }
         else {
+            holder.specialityTv.setVisibility(View.VISIBLE);
             holder.specialityTv.setText(speciality);
+        }
+
+
+        if (fee.isEmpty())
+        {
+            holder.feeTv.setVisibility(View.GONE);
+            holder.feeText.setVisibility(View.GONE);
+        }
+        else {
+            holder.feeTv.setVisibility(View.VISIBLE);
+            holder.feeText.setVisibility(View.VISIBLE);
+            holder.feeTv.setText(fee);
         }
 
 
@@ -105,7 +119,7 @@ public class HospitalsDoctorsAdapter extends RecyclerView.Adapter<HospitalsDocto
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView nameTv,degreeTv,chamberAddressTv,specialityTv,feeTv;
+        TextView nameTv,degreeTv,chamberAddressTv,specialityTv,feeTv, feeText;
         ImageView doctorProfileImage;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -114,11 +128,11 @@ public class HospitalsDoctorsAdapter extends RecyclerView.Adapter<HospitalsDocto
             nameTv = itemView.findViewById(R.id.nameCardTvId);
             specialityTv = itemView.findViewById(R.id.specialityCardTvId);
             feeTv = itemView.findViewById(R.id.feeCardTvId);
+            feeText = itemView.findViewById(R.id.feeCardTextId);
             degreeTv = itemView.findViewById(R.id.degreeCardTvId);
             chamberAddressTv = itemView.findViewById(R.id.chamberAddressCardTvId);
             doctorProfileImage = itemView.findViewById(R.id.doctorProfileImageViewId);
-
-
+            
         }
 
     }

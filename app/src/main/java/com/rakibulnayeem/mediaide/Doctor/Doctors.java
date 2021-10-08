@@ -228,7 +228,7 @@ public class Doctors extends AppCompatActivity implements View.OnClickListener {
         }
 
 
-        else if (item.getItemId() == R.id.addDoctorByAdminMenuId)
+    /*    else if (item.getItemId() == R.id.addDoctorByAdminMenuId)
         {
            Intent intent = new Intent(getApplicationContext(), AddDoctorByAdmin.class);
            startActivity(intent);
@@ -241,6 +241,8 @@ public class Doctors extends AppCompatActivity implements View.OnClickListener {
         }
 
 
+
+     */
 
 
         else if(item.getItemId()==R.id.showYourDoctorAccountMenuId)

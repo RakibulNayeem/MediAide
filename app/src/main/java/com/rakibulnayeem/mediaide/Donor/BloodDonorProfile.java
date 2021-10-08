@@ -1,4 +1,4 @@
-package com.rakibulnayeem.mediaide.Profile;
+package com.rakibulnayeem.mediaide.Donor;
 
 import android.Manifest;
 import android.content.DialogInterface;
@@ -21,21 +21,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.rakibulnayeem.mediaide.Fragments.UploadCallHistoryAdapter;
 import com.rakibulnayeem.mediaide.R;
 
-public class UsersProfile extends AppCompatActivity implements View.OnClickListener {
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+public class BloodDonorProfile extends AppCompatActivity implements View.OnClickListener {
 
     private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 100 ;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     String uid;
     String phoneNumber;
+    DatabaseReference dRef;
+    String current_uid;
+    Calendar calendar;
 
     private TextView bloogGroupTv, villageTv, lastDonationDateTv, upazilaTv, zillaTv, phoneNumberTv, statusTv,nameTv;
     private Button smsBtn, callBtn;
@@ -44,7 +52,7 @@ public class UsersProfile extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_users_profile);
+        setContentView(R.layout.activity_blood_donor_profile);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -53,12 +61,15 @@ public class UsersProfile extends AppCompatActivity implements View.OnClickListe
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("persons_info");
 
+        dRef = FirebaseDatabase.getInstance().getReference("call_history");
+        current_uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
         //get clicked user id(uid)
         Intent intent = getIntent();
         uid = intent.getStringExtra("uid");
 
 
-        nameTv = findViewById(R.id.nameTvId);
+      //  nameTv = findViewById(R.id.nameTvId);
         villageTv = findViewById(R.id.villageTvId);
         phoneNumberTv = findViewById(R.id.phoneNumberTvId);
         lastDonationDateTv = findViewById(R.id.lastDonationDateTvId);
@@ -83,7 +94,7 @@ public class UsersProfile extends AppCompatActivity implements View.OnClickListe
                 //check until required data get
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                     //get data
-                    String name = "" + dataSnapshot1.child("name").getValue();
+                   // String name = "" + dataSnapshot1.child("name").getValue();
                     String village = "" + dataSnapshot1.child("village").getValue();
                     String phone_number = "" + dataSnapshot1.child("phone_number").getValue();
                     String last_donation_date = "" + dataSnapshot1.child("last_donation_date").getValue();
@@ -96,7 +107,7 @@ public class UsersProfile extends AppCompatActivity implements View.OnClickListe
                     phoneNumber = phone_number;
 
                     //set data
-                    nameTv.setText(name);
+                  //  nameTv.setText(name);
                     villageTv.setText(village);
                     lastDonationDateTv.setText(last_donation_date);
                     phoneNumberTv.setText(phone_number);
@@ -126,8 +137,8 @@ public class UsersProfile extends AppCompatActivity implements View.OnClickListe
             callIntent.setData(Uri.parse("tel:" + phoneNumber));
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                if (ContextCompat.checkSelfPermission(UsersProfile.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(UsersProfile.this, new String[]{Manifest.permission.CALL_PHONE},MY_PERMISSIONS_REQUEST_CALL_PHONE);
+                if (ContextCompat.checkSelfPermission(BloodDonorProfile.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(BloodDonorProfile.this, new String[]{Manifest.permission.CALL_PHONE},MY_PERMISSIONS_REQUEST_CALL_PHONE);
                 }
                 else
                 {
@@ -139,7 +150,19 @@ public class UsersProfile extends AppCompatActivity implements View.OnClickListe
                 startActivity(callIntent);
             }
 
-    }
+            // adding call history
+            String type = "Blood Donor";
+            calendar = Calendar.getInstance();
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm a dd-MM-yyyy");
+            String current_time = simpleDateFormat.format(calendar.getTime());
+
+            String Name = "Blood Donor";
+            String key = dRef.push().getKey();
+            UploadCallHistoryAdapter uploadCallHistoryAdapter = new UploadCallHistoryAdapter(key, current_uid, Name, type,phoneNumber, current_time);
+            dRef.child(current_uid).child(key).setValue(uploadCallHistoryAdapter);
+
+
+        }
 
 
         else if (v == smsBtn)

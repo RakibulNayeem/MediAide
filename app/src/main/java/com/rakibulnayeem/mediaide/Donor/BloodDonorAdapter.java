@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.firebase.database.DatabaseReference;
 import com.rakibulnayeem.mediaide.R;
 import com.rakibulnayeem.mediaide.SignUpLogIn.SignUpAdapter;
-import com.rakibulnayeem.mediaide.Profile.UsersProfile;
 
 import java.util.List;
 
@@ -40,36 +39,6 @@ public class BloodDonorAdapter extends RecyclerView.Adapter<BloodDonorAdapter.My
         LayoutInflater layoutInflater = LayoutInflater.from(context);
         View view = layoutInflater.inflate(R.layout.users_row_sample_view,parent,false);
 
-     /*   current_uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        //click counter
-        clickDataRef = FirebaseDatabase.getInstance().getReference("item_click_counter");
-
-        Query query = clickDataRef.orderByChild("uid").equalTo(current_uid);
-         query.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String click= ""+dataSnapshot.child("counter_child").getValue();
-                try {
-                    click_counter = Integer.parseInt(click);
-                } catch(NumberFormatException nfe) {
-                    System.out.println("Could not parse " + nfe);
-                }
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(context,"Failed to load info",Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        // interstitial ad
-        mInterstitialAd = new InterstitialAd(context);
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
-
-
-      */
         return new MyViewHolder(view);
     }
 
@@ -97,7 +66,7 @@ public class BloodDonorAdapter extends RecyclerView.Adapter<BloodDonorAdapter.My
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(context, UsersProfile.class);
+                Intent intent = new Intent(context, BloodDonorProfile.class);
                 intent.putExtra("uid",uid);
                 context.startActivity(intent);
 

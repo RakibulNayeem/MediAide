@@ -64,7 +64,20 @@ public class DoctorsAdapter extends RecyclerView.Adapter<DoctorsAdapter.MyViewHo
             holder.specialityTv.setVisibility(View.GONE);
         }
         else {
+            holder.specialityTv.setVisibility(View.VISIBLE);
             holder.specialityTv.setText(speciality);
+        }
+
+
+        if (fee.isEmpty())
+        {
+            holder.feeTv.setVisibility(View.GONE);
+            holder.feeText.setVisibility(View.GONE);
+        }
+        else {
+            holder.feeTv.setVisibility(View.VISIBLE);
+            holder.feeText.setVisibility(View.VISIBLE);
+            holder.feeTv.setText(fee);
         }
 
 
@@ -99,7 +112,7 @@ public class DoctorsAdapter extends RecyclerView.Adapter<DoctorsAdapter.MyViewHo
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView nameTv,degreeTv,chamberAddressTv, specialityTv, feeTv;
+        TextView nameTv,degreeTv,chamberAddressTv, specialityTv, feeTv, feeText;
         ImageView doctorProfileImage;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -111,6 +124,7 @@ public class DoctorsAdapter extends RecyclerView.Adapter<DoctorsAdapter.MyViewHo
             doctorProfileImage = itemView.findViewById(R.id.doctorProfileImageViewId);
             specialityTv = itemView.findViewById(R.id.specialityCardTvId);
             feeTv = itemView.findViewById(R.id.feeCardTvId);
+            feeText = itemView.findViewById(R.id.feeCardTextId);
         }
     }
 }

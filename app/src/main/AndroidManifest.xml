@@ -76,14 +76,14 @@
         <activity android:name=".Doctor.Doctors" />
         <activity android:name=".Hospital.AddHospital" />
         <activity android:name=".Hospital.Hospital" />
-        <activity android:name=".Profile.UsersProfile" />
+        <activity android:name=".Donor.BloodDonorProfile" />
         <activity android:name=".BloodBanks.AddBloodBank" />
         <activity android:name=".BloodBanks.BloodBank" />
         <activity android:name=".Donor.AddDonor" />
         <activity android:name=".ChangePP" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Profile.UpdateProfile" />
-        <activity android:name=".Donor.BloodDonorActivity" />
+        <activity android:name=".Donor.BloodDonor" />
     </application>
 
 </manifest>

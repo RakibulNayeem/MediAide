@@ -6,12 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#FFFFFF"
-    android:layout_marginBottom="1dp"
-    android:padding="10dp">
+    android:layout_marginBottom="2dp"
+    android:padding="5dp">
 
 
     <LinearLayout
-        android:padding="15dp"
+        android:padding="2dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -25,18 +25,18 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="9.2"
+                android:layout_weight="9.1"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="2dp"
                 android:text="@string/emergency_blood_needed"
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="17dp"
                 />
 
             <ImageView
                 android:id="@+id/dotsIvId"
-                android:layout_weight="0.8"
+                android:layout_weight="0.9"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:src="@drawable/dots"
@@ -75,11 +75,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="5dp"
                 android:text="Blood Group : "
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold"
-                android:textSize="17dp"
+                android:textSize="15dp"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -88,7 +88,7 @@
                 android:text=""
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold"
-                android:textSize="17dp"
+                android:textSize="15dp"
                 />
 
         </LinearLayout>
@@ -103,7 +103,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="5dp"
                 android:text="Hospital name: "
                 android:textStyle="normal"
                 android:textSize="17sp"
@@ -130,7 +130,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="5dp"
                 android:text="Zilla : "
                 android:textStyle="normal"
                 android:textSize="15sp"
@@ -155,7 +155,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="5dp"
                 android:text="Contact : "
                 android:textStyle="normal"
                 android:textSize="15sp"
@@ -180,7 +180,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="5dp"
                 android:text="Time and Date : "
                 android:textStyle="normal"
                 android:textSize="15sp"
@@ -205,7 +205,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="5dp"
                 android:text="Details : "
                 android:textStyle="normal"
                 android:textSize="15sp"

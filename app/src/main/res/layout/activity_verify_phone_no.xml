@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Verify Phone Number"
+            android:text="@string/verify_phone_number"
             android:textStyle="bold"
             android:id="@+id/textView"
             android:layout_marginBottom="10dp"
@@ -57,7 +57,7 @@
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Verify"
+            android:text="@string/verify_button"
             style="@style/Widget.AppCompat.Button.Colored"
             android:background="@drawable/round_bg"
             />
@@ -74,7 +74,7 @@
             android:textAlignment="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Didn't receive the OTP? "
+            android:text="@string/didn_t_receive_the_otp"
 
             />
 
@@ -93,7 +93,7 @@
             android:layout_marginBottom="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RESEND OTP"
+            android:text="@string/resend_otp"
             android:cursorVisible="false"
             android:textStyle="bold"
             android:textColor="#9e9a99"

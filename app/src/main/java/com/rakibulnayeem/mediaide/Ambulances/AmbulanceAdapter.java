@@ -14,8 +14,14 @@ import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.rakibulnayeem.mediaide.Fragments.UploadCallHistoryAdapter;
 import com.rakibulnayeem.mediaide.R;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 public class AmbulanceAdapter extends RecyclerView.Adapter<AmbulanceAdapter.MyViewHolder> {
@@ -23,6 +29,9 @@ public class AmbulanceAdapter extends RecyclerView.Adapter<AmbulanceAdapter.MyVi
     private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 100 ;
     private Context context;
     private List<AddAmbulanceAdapter> adapterList;
+    DatabaseReference dRef;
+    String current_uid;
+    Calendar calendar;
 
     public AmbulanceAdapter(Context context, List<AddAmbulanceAdapter> adapterList) {
         this.context = context;
@@ -35,6 +44,8 @@ public class AmbulanceAdapter extends RecyclerView.Adapter<AmbulanceAdapter.MyVi
 
         LayoutInflater layoutInflater = LayoutInflater.from(context);
         View view = layoutInflater.inflate(R.layout.ambulance_sample_layout, parent, false);
+        dRef = FirebaseDatabase.getInstance().getReference("call_history");
+        current_uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         return new MyViewHolder(view);
     }
@@ -100,6 +111,15 @@ public class AmbulanceAdapter extends RecyclerView.Adapter<AmbulanceAdapter.MyVi
                 }
 
                 context.startActivity(callIntent);
+
+                String type = "Ambulance";
+                calendar = Calendar.getInstance();
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm a dd-MM-yyyy");
+                String current_time = simpleDateFormat.format(calendar.getTime());
+
+                String key = dRef.push().getKey();
+                UploadCallHistoryAdapter uploadCallHistoryAdapter = new UploadCallHistoryAdapter(key, current_uid, name, type,phone_number, current_time);
+                dRef.child(current_uid).child(key).setValue(uploadCallHistoryAdapter);
 
             }
         });

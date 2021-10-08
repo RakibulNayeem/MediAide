@@ -6,10 +6,15 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -19,6 +24,7 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.rakibulnayeem.mediaide.Fragments.CallHistory;
 import com.rakibulnayeem.mediaide.Fragments.HomeFragment;
 import com.rakibulnayeem.mediaide.Posts.RequestFragment;
 import com.rakibulnayeem.mediaide.Profile.ProfileFragment;
@@ -28,6 +34,7 @@ import com.rakibulnayeem.mediaide.fcmnoti.NotifyMembers;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -42,14 +49,16 @@ public class MainActivity extends AppCompatActivity  {
 
         //Actionbar and its title
         actionBar = getSupportActionBar();
-        actionBar.setTitle("Profile");
+
+        //load func for language
+        loadLocale();
 
 
         BottomNavigationView navigationView = findViewById(R.id.navigation);
         navigationView.setOnNavigationItemSelectedListener(selectedListener);
 
         //home fragment transaction (default on start)
-        actionBar.setTitle("Home");//change action bar title
+        actionBar.setTitle(R.string.home_title);//change action bar title
         HomeFragment homeFragment = new HomeFragment();
         FragmentTransaction ft1 = getSupportFragmentManager().beginTransaction();
         ft1.replace(R.id.content,homeFragment,"");
@@ -192,8 +201,67 @@ public class MainActivity extends AppCompatActivity  {
                     Uri.parse("https://play.google.com/store/apps/details?id=" + "com.rakibulnayeem.mediaide")));
         }
 
+        else if(item.getItemId() == R.id.changeLanguageMenuId)
+        {
+            showChangeLanguageDialog();
+        }
+
         return super.onOptionsItemSelected(item);
     }
+
+    private void showChangeLanguageDialog() {
+
+        final String[] listItems = {"English", "বাংলা"};
+         AlertDialog.Builder mBuilder = new AlertDialog.Builder(this);
+                mBuilder.setTitle(R.string.select_language);
+
+           mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
+               @Override
+               public void onClick(DialogInterface dialog, int which) {
+                   if(which == 0)
+                   {
+                       //English
+                       setLocale("en");
+                       recreate();
+                   }
+                   else if(which == 1)
+                   {
+                       // bangla
+                       setLocale("bn");
+                       recreate();
+                   }
+
+                   //dismiss alert dialog when language selected
+                   dialog.dismiss();
+               }
+           });
+
+           //show alert dialog
+          AlertDialog mDialog = mBuilder.create();
+          mDialog.show();
+    }
+
+    private void setLocale(String lang) {
+     Locale locale = new Locale(lang);
+     Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        //save data to shared preferences
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("My_lang", lang);
+        editor.apply();
+
+
+    }
+
+    //load language saved in shared preferences
+    public void loadLocale(){
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        String language = prefs.getString("My_lang", "");
+        setLocale(language);
+    }
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener selectedListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -204,7 +272,7 @@ public class MainActivity extends AppCompatActivity  {
                     {
                         case R.id.nav_home :
                             //fragment transaction
-                            actionBar.setTitle("Home");//change action bar title
+                            actionBar.setTitle(R.string.home_title);//change action bar title
                             HomeFragment homeFragment = new HomeFragment();
                             FragmentTransaction ft1 = getSupportFragmentManager().beginTransaction();
                             ft1.replace(R.id.content,homeFragment,"");
@@ -214,7 +282,7 @@ public class MainActivity extends AppCompatActivity  {
                         case R.id.nav_request :
                             //fragment transaction
 
-                            actionBar.setTitle("Blood Request");//change action bar title
+                            actionBar.setTitle(R.string.request_title);//change action bar title
                             RequestFragment requestFragment = new RequestFragment();
                             FragmentTransaction ft2 = getSupportFragmentManager().beginTransaction();
                             ft2.replace(R.id.content,requestFragment,"");
@@ -222,11 +290,22 @@ public class MainActivity extends AppCompatActivity  {
                             return true;
 
 
+                        case R.id.nav_call_history :
+                            //fragment transaction
+
+                            actionBar.setTitle(R.string.call_title);//change action bar title
+                            CallHistory callHistory = new CallHistory();
+                            FragmentTransaction ft4 = getSupportFragmentManager().beginTransaction();
+                            ft4.replace(R.id.content,callHistory,"");
+                            ft4.commit();
+                            return true;
+
+
 
                         case R.id.nav_profile :
                             //fragment transaction
 
-                            actionBar.setTitle("Profile");//change action bar title
+                            actionBar.setTitle(R.string.profile_title);//change action bar title
                             ProfileFragment profileFragment  = new ProfileFragment();
                             FragmentTransaction ft3 = getSupportFragmentManager().beginTransaction();
                             ft3.replace(R.id.content,profileFragment,"");

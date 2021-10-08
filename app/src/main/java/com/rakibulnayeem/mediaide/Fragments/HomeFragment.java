@@ -20,6 +20,10 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.interfaces.ItemClickListener;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -35,7 +39,7 @@ import com.rakibulnayeem.mediaide.Ambulances.Ambulance;
 import com.rakibulnayeem.mediaide.BloodBanks.BloodBank;
 import com.rakibulnayeem.mediaide.Doctor.Doctors;
 import com.rakibulnayeem.mediaide.Donor.AddDonor;
-import com.rakibulnayeem.mediaide.Donor.BloodDonorActivity;
+import com.rakibulnayeem.mediaide.Donor.BloodDonor;
 import com.rakibulnayeem.mediaide.Fact.Facts;
 import com.rakibulnayeem.mediaide.HealthCares.HealthCare;
 import com.rakibulnayeem.mediaide.Hospital.Hospital;
@@ -45,6 +49,7 @@ import com.rakibulnayeem.mediaide.R;
 import com.rakibulnayeem.mediaide.UserFeedbacks.UserFeedback;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -54,6 +59,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private CardView searchCardView,doctorsCardView, postCardView,addDonorCardView,aboutUsCardView,hospitalCardView;
     private CardView bloodBankCardView,ambulanceCardView,factsCardView,healthCareCardView,organizationCardView,userFeedbackCardView;
     private TextView shareAppTv,rateAppTv;
+
+    ImageSlider mainslider;
 
 
     FirebaseAuth mAuth;
@@ -74,6 +81,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         View view =  inflater.inflate(R.layout.fragment_home, container, false);
 
             mAuth = FirebaseAuth.getInstance();
+
+            //image slider
+        mainslider=view.findViewById(R.id.image_slider);
+        final List<SlideModel> remoteimages=new ArrayList<>();
 
          //Initialize fusedLocationProviderClient
          fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getContext());
@@ -139,6 +150,32 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 }
             });
 
+            //image slider
+        FirebaseDatabase.getInstance().getReference().child("image_slider")
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+                    {
+                        for(DataSnapshot data:dataSnapshot.getChildren())
+                            remoteimages.add(new SlideModel(data.child("url").getValue().toString(), ScaleTypes.FIT));
+
+                        mainslider.setImageList(remoteimages,ScaleTypes.FIT);
+
+                        mainslider.setItemClickListener(new ItemClickListener() {
+                            @Override
+                            public void onItemSelected(int i) {
+                                Toast.makeText(getContext(),"Image clicked",Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
 
 
             return  view;
@@ -152,7 +189,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         switch (v.getId())
         {
             case R.id.searchCardViewId :
-                Intent intent = new Intent(getContext(), BloodDonorActivity.class);
+                Intent intent = new Intent(getContext(), BloodDonor.class);
                 intent.putExtra("zillaName", Zilla);
                 startActivity(intent);
                 break;

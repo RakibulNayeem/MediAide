@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#FFFFFF"
-    android:layout_marginBottom="1dp"
-    android:padding="10dp">
+    android:layout_marginBottom="1dp">
 
 
         <LinearLayout
@@ -18,20 +17,18 @@
 
 
                 <TextView
-                    android:layout_marginLeft="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/nameCardTvId"
-                    android:text="name"
+                    android:text="@string/name"
                     android:textAlignment="center"
-                    android:textColor="#000000"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
-                    android:textSize="17sp"
+                    android:textSize="15sp"
                     />
 
 
             <TextView
-                android:layout_marginLeft="3dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/serviceTypeCardTvId"
@@ -43,6 +40,60 @@
                 />
 
 
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/driverNameTitleCardTvId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/driver"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:textSize="15sp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/driverNameCardTvId"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:textSize="15sp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:textSize="15sp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addressCardTvId"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:textSize="15sp"
+                    />
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:weightSum="2"
@@ -51,52 +102,12 @@
                 android:layout_height="wrap_content">
 
 
-        <!--        <ImageView
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="0.20"
-                    android:layout_width="0dp"
-                    android:layout_height="46dp"
-                    android:src="@drawable/ambulance"
-                    />  -->
-
-
                 <LinearLayout
                     android:layout_weight="1.80"
                     android:orientation="vertical"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
 
-
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:id="@+id/driverNameTitleCardTvId"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text="Driver : "
-                            android:textColor="#000000"
-                            android:textStyle="normal"
-                            android:textSize="17sp"
-
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/driverNameCardTvId"
-                            android:text=""
-                            android:textColor="#000000"
-                            android:textStyle="normal"
-                            android:textSize="17sp"
-                            />
-
-                    </LinearLayout>
-
-
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="wrap_content"
@@ -105,35 +116,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text="Location : "
-                            android:textColor="#000000"
-                            android:textStyle="normal"
-                            android:textSize="15sp"
-
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/addressCardTvId"
-                            android:text=""
-                            android:textStyle="normal"
-                            android:textSize="15sp"
-                            />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text="Zilla : "
-                            android:textColor="#000000"
+                            android:text="@string/zilla_title"
+                            android:textColor="@color/black"
                             android:textStyle="normal"
                             android:textSize="15sp"
 
@@ -143,6 +127,7 @@
                             android:layout_height="wrap_content"
                             android:id="@+id/zillaCardTvId"
                             android:text=""
+                            android:textColor="@color/black"
                             android:textStyle="normal"
                             android:textSize="15sp"
                             />
@@ -158,9 +143,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text="Vehicle No : "
-                            android:textColor="#000000"
+                            android:text="@string/vehicle_no"
+                            android:textColor="@color/black"
                             android:textStyle="normal"
                             android:textSize="15sp"
 
@@ -170,6 +154,7 @@
                             android:layout_height="wrap_content"
                             android:id="@+id/vehicleCardTvId"
                             android:text=""
+                            android:textColor="@color/black"
                             android:textStyle="normal"
                             android:textSize="15sp"
                             />
@@ -186,9 +171,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:textColor="#000000"
-                            android:text="Contact : "
+                            android:textColor="@color/black"
+                            android:text="@string/contact"
                             android:textStyle="normal"
                             android:textSize="15sp"
                             />
@@ -197,6 +181,7 @@
                             android:layout_height="wrap_content"
                             android:id="@+id/phoneNumberCardTvId"
                             android:text=""
+                            android:textColor="@color/black"
                             android:textStyle="normal"
                             android:textSize="15sp"
                             />

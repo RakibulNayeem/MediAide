@@ -44,18 +44,6 @@
                     app:civ_border_color="#000000"/>
 
 
-      <!--          <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/cameraIconViewId"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="2dp"
-                    android:src="@drawable/ic_photo_camera_black_24dp"
-                    app:civ_border_color="#000000"
-                    app:civ_border_width="2dp" />
-         -->
 
             </RelativeLayout>
 
@@ -84,7 +72,7 @@
                         android:textSize="16sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Name : "
+                        android:text="@string/name_title"
                         android:textColor="#000000"
                         />
 
@@ -114,7 +102,7 @@
                         android:textSize="16sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Blood group : "
+                        android:text="@string/blood_group_title"
                         android:textColor="#000000"
                         />
 
@@ -146,7 +134,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="3.3"
                         android:layout_height="wrap_content"
-                        android:text="I Want To Donate"
+                        android:text="@string/donate_title"
                         android:textColor="#000000"
                         />
 
@@ -173,7 +161,7 @@
                         android:textSize="15sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Contact : "
+                        android:text="@string/contact_title"
                         android:textColor="#000000"
                         />
 
@@ -205,7 +193,7 @@
                         android:textSize="15sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Email : "
+                        android:text="@string/email_title"
                         android:textColor="#000000"
                         />
 
@@ -235,7 +223,7 @@
                         android:textSize="15sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Last Donation Date : "
+                        android:text="@string/last_donation_date_title"
                         android:textColor="#000000"
                         />
 
@@ -262,7 +250,7 @@
                         android:textSize="15sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Area/Village : "
+                        android:text="@string/area_village_title"
                         android:textColor="#000000"
                         />
 
@@ -290,7 +278,7 @@
                         android:textSize="15sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Upazila/University : "
+                        android:text="@string/upazila_university_title"
                         android:textColor="#000000"
                         />
 
@@ -317,7 +305,7 @@
                         android:textSize="15sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Zilla : "
+                        android:text="@string/zilla_title"
                         android:textColor="#000000"
                         />
 
@@ -346,7 +334,7 @@
                         android:textSize="15sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Status : "
+                        android:text="@string/status_title"
                         android:textColor="#000000"
                         />
 
@@ -377,7 +365,7 @@
                 <!-- my blood request post -->
                 <Button
                     android:id="@+id/myPostBtnId"
-                    android:text="My Posts"
+                    android:text="@string/my_posts_button_title"
                     android:textStyle="bold"
                     android:textAllCaps="false"
                     style="@style/Widget.AppCompat.Button.Colored"
@@ -392,7 +380,7 @@
 
                  <Button
                      android:id="@+id/editProfileBtnId"
-                     android:text="Update"
+                     android:text="@string/update_button_title"
                      android:textStyle="bold"
                      android:textAllCaps="false"
                      style="@style/Widget.AppCompat.Button.Colored"

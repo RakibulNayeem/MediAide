@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_login_with_phone.xml" value="0.18611111111111112" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_my_posts.xml" value="0.209375" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_update_profile.xml" value="0.209375" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_verify_phone_no.xml" value="0.18611111111111112" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/ambulance_sample_layout.xml" value="0.1935185185185185" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/blood_bank_sample_layout.xml" value="0.1935185185185185" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/fragment_home.xml" value="0.1935185185185185" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/menu/add_ambulance_menu_layout.xml" value="0.22" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/menu/add_b_bank_menu_layout.xml" value="0.17447916666666666" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/menu/add_doctor_for_hospital_menu_layout.xml" value="0.17447916666666666" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/menu/add_doctor_manu_layout.xml" value="0.17447916666666666" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/menu/add_donor_menu_layout.xml" value="0.17447916666666666" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/menu/add_hospital_menu_layout.xml" value="0.17447916666666666" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/menu/add_menu_layout.xml" value="0.17447916666666666" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/menu/add_organizations_menu_layout.xml" value="0.17447916666666666" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/menu/menu_logout.xml" value="0.1935185185185185" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/menu/menu_nav.xml" value="0.18981481481481483" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/menu/search_activity_menu_layout.xml" value="0.17447916666666666" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

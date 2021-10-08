@@ -26,7 +26,7 @@
         android:title="@string/view_your_page"
         />
 
-
+<!--
     <item
            android:id="@+id/addDoctorByAdminMenuId"
            android:icon="@drawable/add_icon_2"
@@ -42,5 +42,5 @@
            android:title="@string/approve_doctor"
         />
 
-
+-->
    </menu>

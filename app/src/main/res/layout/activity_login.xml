@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:hint="phone number"
+        android:hint="Email"
         android:inputType="textEmailAddress" />
 
     <EditText
@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:hint="password"
+        android:hint="Password"
         android:inputType="textPassword" />
 
     <Button
@@ -39,8 +39,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
+        android:background="@drawable/round_bg"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:text="Signin" />
+        android:textAllCaps="false"
+        android:text="Sign In" />
 
 
     <TextView
