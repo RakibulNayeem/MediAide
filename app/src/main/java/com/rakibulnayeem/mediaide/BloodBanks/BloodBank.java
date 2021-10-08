@@ -162,11 +162,13 @@ public class BloodBank extends AppCompatActivity implements View.OnClickListener
             finish();
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }
-        else if (item.getItemId()==R.id.addBBankMenuId)
+    /*    else if (item.getItemId()==R.id.addBBankMenuId)
         {
             startActivity(new Intent(getApplicationContext(), AddBloodBank.class));
         }
 
+
+     */
 
         return super.onOptionsItemSelected(item);
     }

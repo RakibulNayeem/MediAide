@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">মেডিএইড</string>
+    <string name="change_language">ভাষা পরিবর্তন করুন</string>
+
+    <string name="home">হোম</string>
+    <string name="request">অনুরোধ</string>
+    <string name="call">কল</string>
+    <string name="profile">প্রোফাইল</string>
+
+    <string name="home_title">হোম</string>
+    <string name="request_title">রক্তের অনুরোধ</string>
+    <string name="call_title">কল ইতিহাস</string>
+    <string name="profile_title">প্রোফাইল</string>
+
+    <string name="search_details_text">Search donors By Area</string>
+
+    <string name="post">পোস্ট</string>
+    <string name="post_details_text">Post An Emergency Blood Request</string>
+
+
+    <string name="add_donor">দাতা যোগ করুন</string>
+    <string name="add_donor_details_text">Add Donors From Friend List</string>
+
+
+    <string name="blood_bank">ব্লাড ব্যাংক</string>
+    <string name="blood_bank_details_text">Blood Banks in Your Area</string>
+
+
+    <string name="hospital">হাসপাতাল</string>
+    <string name="hospital_details_text">Hospitals/Clinics in Your Area</string>
+
+
+    <string name="doctors">ডাক্তার</string>
+    <string name="doctors_details_text">Doctors Details In Your Area</string>
+
+    <string name="organizations">সংগঠন</string>
+    <string name="organizations_details_text">Blood Related Organizations Near You</string>
+
+    <string name="health_care">স্বাস্থ্যসেবা</string>
+    <string name="health_care_details_text">Health and Nutrition Tips</string>
+
+    <string name="ambulance">অ্যাম্বুলেন্স</string>
+    <string name="ambulance_details_text">Ambulance Service in Your Area</string>
+
+    <string name="facts">তথ্য</string>
+    <string name="facts_details_text">Facts About Blood and Donating Blood</string>
+
+    <string name="about_us">আমাদের সম্পর্কে</string>
+    <string name="about_us_details_text">App and Developer Details</string>
+
+    <string name="user_feedback">মতামত</string>
+    <string name="user_feedback_details_text">Feedback to Improve Any Feature</string>
+
+    <string name="spinner_title">রক্তের গ্রুপ নির্বাচন করুন</string>
+    <string name="splash_screen_moto">রক্ত দান করুন জীবন বাঁচান</string>
+
+
+    <string name="designer_text">ডিজাইন এবং ডেভেলপ</string>
+    <string name="developer_name">রাকিবুল নাঈম</string>
+    <string name="study_text">রুয়েট এ সিএসই অধ্যয়নরত</string>
+    <string name="copy_rights">সর্বস্বত্ব সংরক্ষিত</string>
+    <string name="contact_developer">ডেভেলপারদের সাথে যোগাযোগ করুন</string>
+
+    <string name="facebook_page">মেডিএইড অফিসিয়াল ফেসবুক পেজ</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_doctors">আপনি কি একজন ডাক্তার? অ্যাকাউন্ট তৈরি করুন</string>
+    <string name="view_your_page">আপনার অ্যাকাউন্ট</string>
+    <string name="email_optional">ইমেল (ঐচ্ছিক)</string>
+    <string name="status">অবস্থা (যেমন: আমি রাজশাহীর যে কোন এলাকায় রক্ত দিতে চাই।)</string>
+    <string name="last_donation_date_d_m_y">শেষ রক্তদানের তারিখ (দিন/মাস/বছর)</string>
+    <string name="i_don_t_know">আমি জানি না</string>
+    <string name="more_than_4_months">4 মাসের বেশি</string>
+    <string name="area_village">এলাকা/গ্রাম</string>
+    <string name="upazila_university">উপজেলা/বিশ্ববিদ্যালয়</string>
+    <string name="zilla">জেলা</string>
+    <string name="ambulance_account">অ্যাকাউন্ট তৈরি করুন</string>
+    <string name="show_your_account">আপনার অ্যাকাউন্ট</string>
+    <string name="approve_blood_bank">ব্লাড ব্যাংক অনুমোদন করুন</string>
+    <string name="add_blood_bank">ব্লাড ব্যাংক যোগ করুন</string>
+    <string name="to_add_blood_bank_and_hospital">ব্লাড ব্যাংক এবং হাসপাতালের তথ্য যোগ করতে আমাদের সাথে যোগাযোগ করুন</string>
+    <string name="click_here">এখানে ক্লিক করুন..</string>
+    <string name="emergency_blood_needed">জরুরী রক্তের প্রয়োজন!</string>
+    <string name="add_doctor_admin">ডাক্তার যোগ করুন (প্রশাসক)</string>
+    <string name="add_doctor">ডাক্তার যোগ করুন</string>
+    <string name="specialist">বিশেষজ্ঞ</string>
+    <string name="approve_doctor">ডক্টর অনুমোদন</string>
+    <string name="active_day_e_g_sun_wed_friday_8_am_10_pm">দিনগুলি (যেমন: রবিবার -বুধ, শুধুমাত্র শুক্রবার সকাল 8.00 টা - 10.00 টা)</string>
+    <string name="zilla_again">জেলা (পুনরায়)</string>
+    <string name="phone_number">ফোন নম্বর</string>
+    <string name="status_e_g_i_want_to_donate_blood_any_area_in_rajshahi">অবস্থা (যেমন: আমি রাজশাহীর যে কোন এলাকায় রক্ত দিতে চাই।)</string>
+    <string name="select_hospital">হাসপাতাল নির্বাচন করুন</string>
+    <string name="blood_donor">রক্তদাতা</string>
+    <string name="search">অনুসন্ধান করুন</string>
+    <string name="e_g_3_00_pm_4_april_2020">(যেমন: 3.00 টা, 4 এপ্রিল 2020)</string>
+    <string name="details">"বিস্তারিত : "</string>
+    <string name="time_and_date">"সময় এবং তারিখ : "</string>
+    <string name="contact">"যোগাযোগ : "</string>
+    <string name="location">"অবস্থান : "</string>
+    <string name="hospital_name">"হাসপাতালের নাম : "</string>
+    <string name="blood_group">"রক্তের গ্রুপ : "</string>
+    <string name="_00_00">00:00</string>
+    <string name="name">নাম</string>
+    <string name="driver">"চালক : "</string>
+    <string name="vehicle_no">"যানবাহন নং:"</string>
+    <string name="zilla_title">"জেলা : "</string>
+    <string name="select_zilla">জেলা নির্বাচন করুন</string>
+    <string name="area_village_title">এলাকা/গ্রাম : </string>
+    <string name="select_language">ভাষা পছন্দ করুন</string>
+    <string name="our_services">আমাদের সেবা সমূহ</string>
+    <string name="name_title">নাম : </string>
+    <string name="blood_group_title">রক্তের গ্রুপ : </string>
+    <string name="donate_title">রক্ত দিতে চাই</string>
+    <string name="contact_title">যোগাযোগ : </string>
+    <string name="email_title">ইমেইল : </string>
+    <string name="last_donation_date_title">শেষ রক্তদানের তারিখ : </string>
+    <string name="upazila_university_title">উপজেলা/ইউনিভার্সিটি : </string>
+    <string name="status_title">স্ট্যাটাস : </string>
+    <string name="my_posts_button_title">আমার পোস্ট</string>
+    <string name="update_button_title">আপডেট</string>
+    <string name="my_posts">আমার পোস্ট</string>
+    <string name="update_profile">আপডেট প্রোফাইল</string>
+    <string name="user_login">লগ ইন করুন</string>
+    <string name="log_in_button">লগ ইন</string>
+    <string name="verify_phone_number">মোবাইল নম্বর ভেরিফাই করুন</string>
+    <string name="didn_t_receive_the_otp">OTP পান নাই ?</string>
+    <string name="resend_otp">পূনরায় OTP পাঠান</string>
+    <string name="verify_button">ভেরিফাই</string>
+
+</resources>

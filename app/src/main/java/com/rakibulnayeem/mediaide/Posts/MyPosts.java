@@ -37,7 +37,7 @@ public class MyPosts extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_posts);
-        this.setTitle("My Posts");
+        this.setTitle(getString(R.string.my_posts));
 
         //adding back button to the tool bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

@@ -160,13 +160,11 @@ public class Hospital extends AppCompatActivity implements View.OnClickListener 
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }
 
-      else if(item.getItemId()==R.id.addHospitalMenuId)
+   /*   else if(item.getItemId()==R.id.addHospitalMenuId)
         {
             startActivity(new Intent(getApplicationContext(), AddHospital.class));
         }
-
-
-
+    */
 
 
         return super.onOptionsItemSelected(item);

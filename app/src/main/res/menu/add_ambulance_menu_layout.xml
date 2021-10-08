@@ -24,7 +24,7 @@
         android:title="@string/show_your_account"
         app:showAsAction="never"
         />
-
+<!--
    <item
         android:id="@+id/addAmbulanceByAdminMenuId"
         android:title="Add Ambulance(Admin)"
@@ -36,6 +36,6 @@
         android:id="@+id/approveAmbulanceMenuId"
         android:title="Approve Ambulance"
         app:showAsAction="never"
-        />
+        /> -->
 
 </menu>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:layout_marginBottom="1dp">
+
+    <LinearLayout
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              android:gravity="center_vertical"
+                android:id="@+id/nameTvId"
+                android:layout_width="0dp"
+                android:layout_weight="8.5"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Name"
+                android:textColor="#000000"
+                android:padding="3dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginLeft="2dp"
+                android:textStyle="bold"
+                />
+
+
+            <LinearLayout
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/dotsOptionIvId"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="40dp"
+                    android:layout_height="27dp"
+                    android:src="@drawable/ic_dots"
+
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/numberTvId"
+                    android:text="01xxxxxxxxx"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    />
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/typeTvId"
+                    android:text="Type"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:textSize="15sp"
+                    />
+
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/timeTvId"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:paddingRight="2dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="right"
+
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

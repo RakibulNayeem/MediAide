@@ -15,8 +15,14 @@ import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.rakibulnayeem.mediaide.Fragments.UploadCallHistoryAdapter;
 import com.rakibulnayeem.mediaide.R;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 public class BloodBankAdapter extends RecyclerView.Adapter<BloodBankAdapter.MyViewHolder> {
@@ -24,6 +30,10 @@ public class BloodBankAdapter extends RecyclerView.Adapter<BloodBankAdapter.MyVi
     private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 100 ;
     private Context context;
     private List<AddBBankAdapter> bBankAdapterList;
+
+    DatabaseReference dRef;
+    String current_uid, Name;
+    Calendar calendar;
 
     public BloodBankAdapter(Context context, List<AddBBankAdapter> bBankAdapterList) {
         this.context = context;
@@ -37,6 +47,9 @@ public class BloodBankAdapter extends RecyclerView.Adapter<BloodBankAdapter.MyVi
         LayoutInflater layoutInflater = LayoutInflater.from(context);
         View view = layoutInflater.inflate(R.layout.blood_bank_sample_layout, parent, false);
 
+        dRef = FirebaseDatabase.getInstance().getReference("call_history");
+        current_uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
         return new MyViewHolder(view);
     }
 
@@ -49,6 +62,8 @@ public class BloodBankAdapter extends RecyclerView.Adapter<BloodBankAdapter.MyVi
         final String open_bb = bBankAdapterList.get(position).getOpen_bb();
         final String zilla_bb = bBankAdapterList.get(position).getZilla_bb();
         final String phone_number_bb = bBankAdapterList.get(position).getPhone_number_bb();
+
+        Name = name_bb;
 
 
         //set data
@@ -81,6 +96,16 @@ public class BloodBankAdapter extends RecyclerView.Adapter<BloodBankAdapter.MyVi
                     return;
                 }
                 context.startActivity(callIntent);
+
+                // adding call history
+                String type = "Blood Bank";
+                calendar = Calendar.getInstance();
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm a dd-MM-yyyy");
+                String current_time = simpleDateFormat.format(calendar.getTime());
+
+                String key = dRef.push().getKey();
+                UploadCallHistoryAdapter uploadCallHistoryAdapter = new UploadCallHistoryAdapter(key, current_uid, Name, type,phone_number_bb, current_time);
+                dRef.child(current_uid).child(key).setValue(uploadCallHistoryAdapter);
 
 
             }

@@ -80,8 +80,9 @@ public class RequestFragment extends Fragment {
 
                 requestAdapter = new RequestAdapter(getContext(), adapterList);
 
-                recyclerView.setAdapter(requestAdapter);
                 progressBar.setVisibility(View.GONE);
+                recyclerView.setAdapter(requestAdapter);
+
 
             }
 

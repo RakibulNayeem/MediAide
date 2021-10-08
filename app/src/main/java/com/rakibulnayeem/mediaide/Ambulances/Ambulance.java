@@ -347,7 +347,7 @@ public class Ambulance extends AppCompatActivity implements View.OnClickListener
             });
         }
 
-
+/*
         else if(item.getItemId()==R.id.addAmbulanceByAdminMenuId)
         {
             Intent intent = new Intent(getApplicationContext(), AddAmbulance.class);
@@ -363,6 +363,8 @@ public class Ambulance extends AppCompatActivity implements View.OnClickListener
 
 
 
+
+ */
 
         return super.onOptionsItemSelected(item);
     }

@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.rakibulnayeem.mediaide.Ambulances.Ambulance;
 import com.rakibulnayeem.mediaide.BloodBanks.BloodBank;
 import com.rakibulnayeem.mediaide.Doctor.Doctors;
-import com.rakibulnayeem.mediaide.Donor.BloodDonorActivity;
+import com.rakibulnayeem.mediaide.Donor.BloodDonor;
 import com.rakibulnayeem.mediaide.Hospital.Hospital;
 import com.rakibulnayeem.mediaide.Hospital.HospitalList;
 import com.rakibulnayeem.mediaide.Hospital.HospitalListAdmin;
@@ -105,7 +105,7 @@ public class ZillaList extends AppCompatActivity implements AdapterView.OnItemCl
 
         else if (Name.equals("donor_search"))
         {
-            Intent intent = new Intent(getApplicationContext(), BloodDonorActivity.class);
+            Intent intent = new Intent(getApplicationContext(), BloodDonor.class);
             intent.putExtra("zillaName",value);
             startActivity(intent);
             finish();

@@ -56,9 +56,7 @@ public class AddDoctorByAdmin extends AppCompatActivity implements View.OnClickL
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-         mAuth = FirebaseAuth.getInstance();
-         user = mAuth.getCurrentUser();
-         uid = user.getUid();
+
 
         databaseReference = FirebaseDatabase.getInstance().getReference("doctors_info");
 
@@ -197,12 +195,6 @@ public class AddDoctorByAdmin extends AppCompatActivity implements View.OnClickL
             return;
         }
 
-        if(fee.isEmpty())
-        {
-            feeEt.setError("Enter Fee");
-            feeEt.requestFocus();
-            return;
-        }
 
         if(active_day.isEmpty())
         {
@@ -245,6 +237,7 @@ public class AddDoctorByAdmin extends AppCompatActivity implements View.OnClickL
 
 
         String key = databaseReference.push().getKey();
+        uid = key;
 
         AddDoctorByAdminAdapter adapter = new AddDoctorByAdminAdapter(uid,key,name,hospital_name,hospital_id,degree,speciality,fee,chamber_address,zilla,phone_number,active_day,time,ampm,time2,ampm2,imageUri);
         databaseReference.child(key).setValue(adapter);

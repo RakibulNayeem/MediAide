@@ -6,12 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#FFFFFF"
-    android:layout_marginBottom="1dp"
-    android:padding="10dp">
+    android:layout_marginBottom="1dp">
 
 
     <LinearLayout
-        android:padding="15dp"
+        android:padding="8dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -27,9 +26,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/nameCardTvId"
                 android:text="Name"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textStyle="bold"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 />
 
         </LinearLayout>
@@ -44,11 +43,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:text="Address : "
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textStyle="normal"
-                android:textSize="17sp"
+                android:textSize="15sp"
 
                 />
             <TextView
@@ -56,8 +54,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/addressCardTvId"
                 android:text=""
+                android:textColor="@color/black"
                 android:textStyle="normal"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 />
 
         </LinearLayout>
@@ -70,11 +69,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:text="Category : "
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textStyle="normal"
-                android:textSize="17sp"
+                android:textSize="15sp"
 
                 />
             <TextView
@@ -82,8 +80,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/categoryCardTvId"
                 android:text=""
+                android:textColor="@color/black"
                 android:textStyle="normal"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 />
 
         </LinearLayout>
@@ -111,11 +110,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:textColor="#000000"
-                        android:text="Zilla : "
+                        android:textColor="@color/black"
+                        android:text="@string/zilla_title"
                         android:textStyle="normal"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
 
                         />
                     <TextView
@@ -123,8 +121,9 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/zillaCardTvId"
                         android:text=""
+                        android:textColor="@color/black"
                         android:textStyle="normal"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         />
 
                 </LinearLayout>
@@ -138,19 +137,19 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:textColor="#000000"
-                        android:text="Contact : "
+                        android:textColor="@color/black"
+                        android:text="@string/contact"
                         android:textStyle="normal"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/phoneNumberCardTvId"
                         android:text=""
+                        android:textColor="@color/black"
                         android:textStyle="normal"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         />
 
                 </LinearLayout>

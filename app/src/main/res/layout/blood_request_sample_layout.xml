@@ -7,11 +7,11 @@
     android:layout_height="wrap_content"
     android:background="#FFFFFF"
     android:layout_marginBottom="1dp"
-    android:padding="10dp">
+    android:padding="5dp">
 
 
     <LinearLayout
-        android:padding="15dp"
+        android:padding="3dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -24,21 +24,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Emergency Blood Needed!"
+                android:layout_marginStart="5dp"
+                android:text="@string/emergency_blood_needed"
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold"
-                android:textSize="17dp"
+                android:textSize="15sp"
                 />
 
             <TextView
                 android:id="@+id/currentTimeCardTvId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="00:00"
-                android:paddingRight="2dp"
-                android:layout_marginLeft="5dp"
-                android:gravity="right"
+                android:text="@string/_00_00"
+                android:paddingEnd="2dp"
+                android:layout_marginStart="5dp"
+                android:textSize="12sp"
+                android:gravity="end"
 
                 />
 
@@ -55,11 +56,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Blood Group : "
+                android:layout_marginStart="5dp"
+                android:text="@string/blood_group"
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold"
-                android:textSize="17dp"
+                android:textSize="15sp"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -68,7 +69,7 @@
                 android:text=""
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold"
-                android:textSize="17dp"
+                android:textSize="15sp"
                 />
 
         </LinearLayout>
@@ -83,10 +84,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Hospital name: "
+                android:layout_marginStart="5dp"
+                android:text="@string/hospital_name"
                 android:textStyle="normal"
-                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
 
                 />
             <TextView
@@ -94,6 +96,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/hospitalNameCardTvId"
                 android:text=""
+                android:textColor="@color/black"
                 android:textStyle="normal"
                 android:textSize="15sp"
                 />
@@ -110,8 +113,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Location : "
+                android:layout_marginStart="5dp"
+                android:text="@string/location"
+                android:textColor="@color/black"
                 android:textStyle="normal"
                 android:textSize="15sp"
                 />
@@ -120,6 +124,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/zillaCardTvId"
                 android:text=""
+                android:textColor="@color/black"
                 android:textStyle="normal"
                 android:textSize="15sp"
                 />
@@ -135,8 +140,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Contact : "
+                android:layout_marginStart="5dp"
+                android:text="@string/contact"
+                android:textColor="@color/black"
                 android:textStyle="normal"
                 android:textSize="15sp"
                 />
@@ -145,6 +151,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/phoneNumberCardTvId"
                 android:text=""
+                android:textColor="@color/black"
                 android:textStyle="normal"
                 android:textSize="15sp"
                 />
@@ -160,8 +167,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Time and Date : "
+                android:layout_marginLeft="5dp"
+                android:text="@string/time_and_date"
+                android:textColor="@color/black"
                 android:textStyle="normal"
                 android:textSize="15sp"
                 />
@@ -170,7 +178,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/dateTimeCardTvId"
                 android:text=""
-                android:hint="(e.g: 3.00 pm , 4 april 2020)"
+                android:hint="@string/e_g_3_00_pm_4_april_2020"
+                android:textColor="@color/black"
                 android:textStyle="normal"
                 android:textSize="15sp"
                 />
@@ -185,8 +194,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Details : "
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/black"
+                android:text="@string/details"
                 android:textStyle="normal"
                 android:textSize="15sp"
                 />
@@ -195,6 +205,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/detailsCardTvId"
                 android:text=""
+                android:textColor="@color/black"
                 android:textStyle="normal"
                 android:textSize="15sp"
                 />

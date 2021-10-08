@@ -18,14 +18,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.rakibulnayeem.mediaide.Fragments.UploadCallHistoryAdapter;
 import com.rakibulnayeem.mediaide.R;
 import com.squareup.picasso.Picasso;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class DoctorsProfile extends AppCompatActivity implements View.OnClickListener {
 
@@ -35,8 +40,12 @@ public class DoctorsProfile extends AppCompatActivity implements View.OnClickLis
     String uid;
     String phoneNumber;
 
+    DatabaseReference dRef;
+    String current_uid, Name;
+    Calendar calendar;
+
     TextView nameTv,degreeTv,chamberAddressTv,zillaTv,openTimeTv,ampmTv,closeTimeTv,ampm2Tv,phoneNumberTv,activeDayTv;
-    TextView specialityTv, feeTv, hospitalTv;
+    TextView specialityTv, feeTv, hospitalTv, feeText;
     ImageView doctorProfileImage;
     private Button callBtn;
 
@@ -52,6 +61,9 @@ public class DoctorsProfile extends AppCompatActivity implements View.OnClickLis
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         databaseReference = FirebaseDatabase.getInstance().getReference("doctors_info");
+        dRef = FirebaseDatabase.getInstance().getReference("call_history");
+        current_uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
 
 
         //get clicked user id(uid)
@@ -71,6 +83,7 @@ public class DoctorsProfile extends AppCompatActivity implements View.OnClickLis
         doctorProfileImage = findViewById(R.id.doctorProfileImageToUIvId);
         specialityTv = findViewById(R.id.specialityProTvId);
         feeTv = findViewById(R.id.feeProTvId);
+        feeText = findViewById(R.id.feeProTextId);
         activeDayTv = findViewById(R.id.activeDayProTvId);
 
 
@@ -111,16 +124,17 @@ public class DoctorsProfile extends AppCompatActivity implements View.OnClickLis
 
                     //set data
                     nameTv.setText(name);
+                    Name = name;
                     degreeTv.setText(degree);
                     phoneNumberTv.setText(phone_number);
                     chamberAddressTv.setText(chamber_address);
-                    hospitalTv.setText(hospital_name);
+                  //  hospitalTv.setText(hospital_name);
                     openTimeTv.setText(open_time);
                     zillaTv.setText(zilla);
                     ampm2Tv.setText(ampm2);
                     ampmTv.setText(ampm);
                     closeTimeTv.setText(close_time);
-                    feeTv.setText(fee);
+                   // feeTv.setText(fee);
                     activeDayTv.setText(active_day);
 
                     if (speciality.isEmpty())
@@ -128,6 +142,29 @@ public class DoctorsProfile extends AppCompatActivity implements View.OnClickLis
                         specialityTv.setVisibility(View.GONE);
                     }
                     else {
+                        specialityTv.setVisibility(View.VISIBLE);
+                        specialityTv.setText(speciality);
+                    }
+
+
+                    if (hospital_name.isEmpty())
+                    {
+                        hospitalTv.setVisibility(View.GONE);
+                    }
+                    else {
+                        hospitalTv.setVisibility(View.VISIBLE);
+                        hospitalTv.setText(hospital_name);
+                    }
+
+
+                    if (fee.isEmpty())
+                    {
+                        feeTv.setVisibility(View.GONE);
+                        feeText.setVisibility(View.GONE);
+                    }
+                    else {
+                        feeTv.setVisibility(View.VISIBLE);
+                        feeText.setVisibility(View.VISIBLE);
                         specialityTv.setText(speciality);
                     }
 
@@ -181,7 +218,15 @@ public class DoctorsProfile extends AppCompatActivity implements View.OnClickLis
             {
                 startActivity(callIntent);
             }
+            // adding call history
+            String type = "Doctor";
+            calendar = Calendar.getInstance();
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm a dd-MM-yyyy");
+            String current_time = simpleDateFormat.format(calendar.getTime());
 
+            String key = dRef.push().getKey();
+            UploadCallHistoryAdapter uploadCallHistoryAdapter = new UploadCallHistoryAdapter(key, current_uid, Name, type,phoneNumber, current_time);
+            dRef.child(current_uid).child(key).setValue(uploadCallHistoryAdapter);
 
         }
 

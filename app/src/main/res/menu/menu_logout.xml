@@ -20,12 +20,20 @@
 
 
     <item
-
         android:title="Sign Out"
         android:icon="@drawable/ic_signout_24"
         android:orderInCategory="100"
         app:showAsAction="never"
         android:id="@+id/signOutMenuId"
         />
+
+    <item
+        android:title="@string/change_language"
+        android:icon="@drawable/ic_change_language_holo_light"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:id="@+id/changeLanguageMenuId"
+        />
+
 
 </menu>

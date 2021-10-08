@@ -35,7 +35,7 @@ import com.rakibulnayeem.mediaide.ZillaList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BloodDonorActivity extends AppCompatActivity implements View.OnClickListener {
+public class BloodDonor extends AppCompatActivity implements View.OnClickListener {
 
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
@@ -122,7 +122,7 @@ public class BloodDonorActivity extends AppCompatActivity implements View.OnClic
         if (Zilla==null)
         {
             //get all donors
-            Toast.makeText(getApplicationContext(), "Location : "+Zilla, Toast.LENGTH_SHORT).show();
+         //   Toast.makeText(getApplicationContext(), "Location : "+Zilla, Toast.LENGTH_SHORT).show();
 
             databaseReference = FirebaseDatabase.getInstance().getReference("persons_info");
 
@@ -142,7 +142,7 @@ public class BloodDonorActivity extends AppCompatActivity implements View.OnClic
 
                     }
 
-                    bloodDonorAdapter = new BloodDonorAdapter(BloodDonorActivity.this, adapterList);
+                    bloodDonorAdapter = new BloodDonorAdapter(BloodDonor.this, adapterList);
 
                     bloodDonorAdapter.notifyDataSetChanged();
                     recyclerView.setAdapter(bloodDonorAdapter);
@@ -184,7 +184,7 @@ public class BloodDonorActivity extends AppCompatActivity implements View.OnClic
 
                     }
 
-                    bloodDonorAdapter = new BloodDonorAdapter(BloodDonorActivity.this, adapterList);
+                    bloodDonorAdapter = new BloodDonorAdapter(BloodDonor.this, adapterList);
 
                     bloodDonorAdapter.notifyDataSetChanged();
                     recyclerView.setAdapter(bloodDonorAdapter);
@@ -311,7 +311,7 @@ public class BloodDonorActivity extends AppCompatActivity implements View.OnClic
 
                     }
 
-                    bloodDonorAdapter = new BloodDonorAdapter(BloodDonorActivity.this, adapterList);
+                    bloodDonorAdapter = new BloodDonorAdapter(BloodDonor.this, adapterList);
 
                     //refresh adapter
                     bloodDonorAdapter.notifyDataSetChanged();
@@ -355,7 +355,7 @@ public class BloodDonorActivity extends AppCompatActivity implements View.OnClic
 
                     }
 
-                    bloodDonorAdapter = new BloodDonorAdapter(BloodDonorActivity.this, adapterList);
+                    bloodDonorAdapter = new BloodDonorAdapter(BloodDonor.this, adapterList);
 
                     //refresh adapter
                     bloodDonorAdapter.notifyDataSetChanged();

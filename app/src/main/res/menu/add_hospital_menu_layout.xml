@@ -11,14 +11,14 @@
         app:showAsAction="always"
         app:actionViewClass="android.widget.SearchView" />
 
-
+<!--
     <item
         android:id="@+id/addHospitalMenuId"
         android:icon="@drawable/add_icon_2"
         app:showAsAction="never"
         android:title="Add Hospital"
         />
-
+-->
 
 
 </menu>

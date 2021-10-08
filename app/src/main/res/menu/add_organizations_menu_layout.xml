@@ -26,7 +26,7 @@
         app:showAsAction="never"
         />
 
-
+<!--
 
     <item
         android:id="@+id/addOrganizationByAdminMenuId"
@@ -39,6 +39,6 @@
         android:title="Approve Organizations"
         app:showAsAction="never"
         />
-
+-->
 
 </menu>
