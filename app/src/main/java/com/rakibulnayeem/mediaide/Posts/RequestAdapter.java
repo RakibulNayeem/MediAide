@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.rakibulnayeem.mediaide.R;
 
 import java.util.List;
@@ -38,6 +39,7 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.MyViewHo
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
 
+        final String user_name = adapterList.get(position).getUser_name();
         final String blood_group = adapterList.get(position).getBlood_group();
         final String hospital_name = adapterList.get(position).getHospital_name();
         final String details = adapterList.get(position).getDetails();
@@ -47,6 +49,7 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.MyViewHo
         final String current_time = adapterList.get(position).getCurrent_time();
 
 
+        holder.userNameTv.setText(user_name);
         holder.bloodGroupTv.setText(blood_group);
         holder.hospitalNameTv.setText(hospital_name);
         holder.detailsTv.setText(details);
@@ -65,12 +68,13 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.MyViewHo
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView hospitalNameTv,detailsTv,zillaTv,phoneNumberTv,dateTimeTv,bloodGroupTv, currenTimeTv;
+        TextView hospitalNameTv,detailsTv,zillaTv,phoneNumberTv,dateTimeTv,bloodGroupTv, currenTimeTv, userNameTv;
 
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            userNameTv = itemView.findViewById(R.id.userNameCardTvId);
             bloodGroupTv = itemView.findViewById(R.id.bloodGroupCardTvId);
             hospitalNameTv = itemView.findViewById(R.id.hospitalNameCardTvId);
             detailsTv = itemView.findViewById(R.id.detailsCardTvId);

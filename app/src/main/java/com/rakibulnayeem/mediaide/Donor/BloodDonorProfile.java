@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -46,6 +47,7 @@ public class BloodDonorProfile extends AppCompatActivity implements View.OnClick
     Calendar calendar;
 
     private TextView bloogGroupTv, villageTv, lastDonationDateTv, upazilaTv, zillaTv, phoneNumberTv, statusTv,nameTv;
+    private TextView donate_availabilityTv;
     private Button smsBtn, callBtn;
 
 
@@ -77,6 +79,7 @@ public class BloodDonorProfile extends AppCompatActivity implements View.OnClick
         upazilaTv = findViewById(R.id.upazilaTvId);
         zillaTv = findViewById(R.id.zillaTvId);
         statusTv = findViewById(R.id.statusTvId);
+        donate_availabilityTv = findViewById(R.id.availabilityTvId);
 
 
         callBtn = findViewById(R.id.callBtnId);
@@ -102,6 +105,8 @@ public class BloodDonorProfile extends AppCompatActivity implements View.OnClick
                     String upazil = "" + dataSnapshot1.child("upazila").getValue();
                     String zilla = "" + dataSnapshot1.child("zilla").getValue();
                     String status = "" + dataSnapshot1.child("status").getValue();
+                    String donate_switch = "" + dataSnapshot1.child("donate_switch").getValue();
+
 
                     //get phone number
                     phoneNumber = phone_number;
@@ -116,6 +121,15 @@ public class BloodDonorProfile extends AppCompatActivity implements View.OnClick
                     zillaTv.setText(zilla);
                     statusTv.setText(status);
 
+                    if(donate_switch.equals("true")){
+                        donate_availabilityTv.setText("Available");
+                        donate_availabilityTv.setTextColor(Color.parseColor("#047065"));
+                    }
+                    else {
+                        donate_availabilityTv.setText("Not Available");
+                        donate_availabilityTv.setTextColor(Color.parseColor("#DD4E4E"));
+                    }
+
                 }
             }
 
@@ -125,8 +139,6 @@ public class BloodDonorProfile extends AppCompatActivity implements View.OnClick
                 Toast.makeText(getApplicationContext(), "Failed to load information ", Toast.LENGTH_LONG).show();
             }
         });
-
-
     }
 
     @Override

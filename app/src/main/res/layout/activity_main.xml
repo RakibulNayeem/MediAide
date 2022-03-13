@@ -8,7 +8,6 @@
     tools:context=".MainActivity">
 
 
-
     <!--Framelayout : show fragment-->
 
     <FrameLayout
@@ -16,7 +15,6 @@
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp">
-
     </FrameLayout>
 
     <!--Bottom Navigation : show menu-->

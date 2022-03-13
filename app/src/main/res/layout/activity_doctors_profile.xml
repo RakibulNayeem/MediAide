@@ -102,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/degreeProTvId"
                     android:text="degree"
-                    android:textColor="#DD655C"
+                    android:textColor="@color/deep_green"
                     android:textStyle="bold"
                     android:textSize="14sp"
                     />
@@ -334,7 +334,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/deep_green"
                     android:text="Fee : BDT "
                     android:textStyle="bold"
                     android:textSize="14sp"
@@ -344,7 +344,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/feeProTvId"
                     android:text=""
-                    android:textColor="@color/black"
+                    android:textColor="@color/deep_green"
                     android:textStyle="bold"
                     android:textSize="14sp"
                     />

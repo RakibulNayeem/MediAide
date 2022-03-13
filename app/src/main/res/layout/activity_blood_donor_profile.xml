@@ -41,10 +41,6 @@
         </LinearLayout>
 
 
-
-
-
-
         <LinearLayout
             android:padding="15dp"
             android:background="@android:drawable/dialog_holo_light_frame"
@@ -53,25 +49,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-
-
-         <!--   <LinearLayout
-                android:gravity="center_horizontal"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/nameTvId"
-                    android:text="Name"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
-                    android:textSize="17sp"
-                    />
-
-            </LinearLayout>  -->
 
 
             <LinearLayout
@@ -87,16 +64,73 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Blood group : "
-                    android:textColor="#000000"
+                    android:textColor="@color/colorPrimary"
                     />
 
                 <TextView
-                    android:textColor="#000000"
+                    android:textColor="@color/colorPrimary"
                     android:textStyle="bold"
                     android:textSize="17sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/bloodGTvId"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="1dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginLeft="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Donated : "
+                    android:textColor="@color/deep_green"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/donatedCardTvId"
+                    android:text="10+ times"
+                    android:textColor="@color/deep_green"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="2dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Availability : "
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_marginRight="4dp"
+                    android:paddingRight="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/availabilityTvId"
+                    android:text="Available"
+                    android:textColor="@color/deep_green"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:gravity="end"
                     />
 
             </LinearLayout>
@@ -108,26 +142,38 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_marginLeft="3dp"
-                    android:textStyle="bold"
-                    android:textSize="17sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Contact : "
-                    android:textColor="#000000"
-                    />
+                    <!--call button-->
+                    <ImageView
+                        android:layout_margin="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_call_icon"
+                        android:id="@+id/callDonorBtnId"
+                        />
+
+<!--                <TextView-->
+<!--                    android:layout_marginLeft="3dp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="17sp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Contact : "-->
+<!--                    android:textColor="#000000"-->
+<!--                    />-->
 
                 <TextView
-                    android:textColor="#000000"
+                    android:layout_marginLeft="8dp"
                     android:textStyle="normal"
                     android:textSize="17sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/phoneNumberTvId"
+                    android:textColor="@color/black"
                     />
 
             </LinearLayout>
+
 
 
 
@@ -143,17 +189,17 @@
                     android:textSize="15sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Last Donation Date : "
-                    android:textColor="#000000"
+                    android:text="Last Donation : "
+                    android:textColor="@color/black"
                     />
 
                 <TextView
-                    android:textColor="#000000"
                     android:textStyle="normal"
                     android:textSize="15sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/lastDonationDateTvId"
+                    android:textColor="@color/black"
                     />
 
             </LinearLayout>
@@ -171,16 +217,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Area/Village : "
-                    android:textColor="#000000"
+                    android:textColor="@color/black"
+
                     />
 
                 <TextView
-                    android:textColor="#000000"
                     android:textStyle="normal"
                     android:textSize="15sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/villageTvId"
+                    android:textColor="@color/black"
                     />
 
             </LinearLayout>
@@ -199,16 +246,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Upazila/University : "
-                    android:textColor="#000000"
+                    android:textColor="@color/black"
+
                     />
 
                 <TextView
-                    android:textColor="#000000"
+
                     android:textStyle="normal"
                     android:textSize="15sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/upazilaTvId"
+                    android:textColor="@color/black"
                     />
 
             </LinearLayout>
@@ -226,11 +275,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Zilla : "
-                    android:textColor="#000000"
+                    android:textColor="@color/black"
                     />
 
                 <TextView
-                    android:textColor="#000000"
+                    android:textColor="@color/black"
                     android:textStyle="normal"
                     android:textSize="15sp"
                     android:layout_width="match_parent"
@@ -255,11 +304,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Status : "
-                    android:textColor="#000000"
+                    android:textColor="@color/black"
                     />
 
                 <TextView
-                    android:textColor="#000000"
+                    android:textColor="@color/black"
                     android:textStyle="normal"
                     android:textSize="15sp"
                     android:layout_width="match_parent"

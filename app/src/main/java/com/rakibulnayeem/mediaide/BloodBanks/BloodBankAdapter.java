@@ -70,7 +70,7 @@ public class BloodBankAdapter extends RecyclerView.Adapter<BloodBankAdapter.MyVi
         holder.nameBBTv.setText(name_bb);
         holder.addressBBTv.setText(address_bb);
         holder.openBBTv.setText(open_bb);
-        holder.zillaBBTv.setText(zilla_bb);
+//        holder.zillaBBTv.setText(zilla_bb);
         holder.phoneNumberBBTv.setText(phone_number_bb);
 
 
@@ -128,7 +128,7 @@ public class BloodBankAdapter extends RecyclerView.Adapter<BloodBankAdapter.MyVi
             nameBBTv = itemView.findViewById(R.id.nameBBCardTvId);
             addressBBTv = itemView.findViewById(R.id.addressCardTvId);
             openBBTv = itemView.findViewById(R.id.openCardTvId);
-            zillaBBTv = itemView.findViewById(R.id.zillaCardTvId);
+           // zillaBBTv = itemView.findViewById(R.id.zillaCardTvId);
             phoneNumberBBTv = itemView.findViewById(R.id.phoneNumberCardTvId);
         }
     }

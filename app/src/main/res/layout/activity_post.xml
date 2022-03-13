@@ -19,16 +19,16 @@
             android:layout_height="wrap_content">
 
 
-        <!--    <TextView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Write A Post"
+                android:text="@string/create_post"
                 android:id="@+id/textView"
                 android:textStyle="bold"
                 android:layout_marginBottom="10dp"
                 android:layout_gravity="center_horizontal" />
-                -->
+
 
             <LinearLayout
                 android:layout_marginBottom="20dp"
@@ -43,7 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="Blood Group"
+                android:hint="@string/blood_group"
                 android:completionThreshold="1"
                 />
 
@@ -55,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="Hospital Name/Area(with Location)"
+                android:hint="@string/hospital_name_area_with_location"
                 android:inputType="textPersonName"
                 />
 
@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="Zilla"
+                android:hint="@string/zilla"
                 android:completionThreshold="1"
                 />
 
@@ -74,7 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="Phone number"
+                android:hint="@string/phone_number"
                 android:inputType="phone"
                 />
 
@@ -85,9 +85,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="Date and Time"
-                android:inputType="textMultiLine"
-                />
+                android:hint="@string/date_and_time"
+                android:inputType="textMultiLine" />
 
 
             <EditText
@@ -99,7 +98,7 @@
                 android:minHeight="80dp"
                 android:gravity="start"
                 android:inputType="textCapSentences|textMultiLine"
-                android:hint="Details(Purpose and number of bags)"
+                android:hint="@string/details_purpose_and_number_of_bags"
                 />
 
 
@@ -108,10 +107,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:textAllCaps="false"
-                android:text="Post" />
+                android:text="@string/post" />
 
 
             <ProgressBar

@@ -1,23 +1,31 @@
 package com.rakibulnayeem.mediaide.Doctor;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -31,6 +39,7 @@ import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import android.view.Window;
 
 public class DoctorsProfile extends AppCompatActivity implements View.OnClickListener {
 
@@ -48,18 +57,21 @@ public class DoctorsProfile extends AppCompatActivity implements View.OnClickLis
     TextView specialityTv, feeTv, hospitalTv, feeText;
     ImageView doctorProfileImage;
     private Button callBtn;
-
+    Toolbar toolbar;
+    TabLayout tabLayout;
+    ViewPager viewPager;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_doctors_profile);
+        setContentView(R.layout.activity_doctors_profile_2_demo);
         this.setTitle("Doctor's Profile");
 
-        //adding back button to the tool bar
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        toolbar = findViewById(R.id.toolbar); // get the reference of Toolbar
+        setSupportActionBar(toolbar); // Setting/replace toolbar as the ActionBar
+
+
         databaseReference = FirebaseDatabase.getInstance().getReference("doctors_info");
         dRef = FirebaseDatabase.getInstance().getReference("call_history");
         current_uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -86,7 +98,9 @@ public class DoctorsProfile extends AppCompatActivity implements View.OnClickLis
         feeText = findViewById(R.id.feeProTextId);
         activeDayTv = findViewById(R.id.activeDayProTvId);
 
-
+        //tabLayout and viewPager
+        tabLayout = findViewById(R.id.doctorProfileTabId);
+        viewPager = findViewById(R.id.doctorProfileVPId);
 
 
 
@@ -193,6 +207,18 @@ public class DoctorsProfile extends AppCompatActivity implements View.OnClickLis
         });
 
 
+
+        //viewPager and tabs
+        ViewPagerDoctorTabAdapter adapter = new ViewPagerDoctorTabAdapter(getSupportFragmentManager());
+
+        //add fragments
+
+        adapter.AddFragment(new ChamberFragment(),"Chamber");
+        adapter.AddFragment(new ExperienceFragment(),"Experience");
+        adapter.AddFragment(new AboutDoctorFragment(),"About Doctor");
+
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
 
     }
 

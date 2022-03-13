@@ -2,13 +2,14 @@ package com.rakibulnayeem.mediaide.Posts;
 
 public class PostAdapter {
 
-    private String uid, key,current_time, hospital_name,blood_group,date_time,details,zilla,phone_number;
+    private String uid,user_name, key,current_time, hospital_name,blood_group,date_time,details,zilla,phone_number;
 
     public PostAdapter() {
     }
 
-    public PostAdapter(String uid, String key, String current_time, String hospital_name, String blood_group, String date_time, String details, String zilla, String phone_number) {
+    public PostAdapter(String uid, String user_name, String key, String current_time, String hospital_name, String blood_group, String date_time, String details, String zilla, String phone_number) {
         this.uid = uid;
+        this.user_name = user_name;
         this.key = key;
         this.current_time = current_time;
         this.hospital_name = hospital_name;
@@ -25,6 +26,14 @@ public class PostAdapter {
 
     public void setUid(String uid) {
         this.uid = uid;
+    }
+
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
     public String getKey() {

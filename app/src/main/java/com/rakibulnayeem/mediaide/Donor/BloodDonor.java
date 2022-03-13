@@ -1,8 +1,10 @@
 package com.rakibulnayeem.mediaide.Donor;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -27,6 +29,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.rakibulnayeem.mediaide.BloodBanks.AddBBankAdapter;
 import com.rakibulnayeem.mediaide.MainActivity;
 import com.rakibulnayeem.mediaide.R;
 import com.rakibulnayeem.mediaide.SignUpLogIn.SignUpAdapter;
@@ -58,7 +61,7 @@ public class BloodDonor extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blood_donor);
-        this.setTitle("Blood Donor");
+        this.setTitle(getString(R.string.blood_donor));
 
         //adding back button to the tool bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -66,6 +69,7 @@ public class BloodDonor extends AppCompatActivity implements View.OnClickListene
 
         firebaseAuth = FirebaseAuth.getInstance();
         user = firebaseAuth.getCurrentUser();
+        assert user != null;
         uid = user.getUid();
 
         recyclerView = findViewById(R.id.usersRecycleViewId);
@@ -127,6 +131,7 @@ public class BloodDonor extends AppCompatActivity implements View.OnClickListene
             databaseReference = FirebaseDatabase.getInstance().getReference("persons_info");
 
             databaseReference.addValueEventListener(new ValueEventListener() {
+                @SuppressLint("NotifyDataSetChanged")
                 @Override
 
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -135,7 +140,8 @@ public class BloodDonor extends AppCompatActivity implements View.OnClickListene
                     {
                         SignUpAdapter upInfo = dataSnapshot1.getValue(SignUpAdapter.class);
 
-                        if (!upInfo.getUid().equals(uid) && upInfo.getDonate_switch().toLowerCase().equals("true"))
+                        assert upInfo != null;
+                        if (!upInfo.getUid().equals(uid))
                         {
                             adapterList.add(upInfo);
                         }
@@ -172,7 +178,7 @@ public class BloodDonor extends AppCompatActivity implements View.OnClickListene
                     {
                         SignUpAdapter upInfo = dataSnapshot1.getValue(SignUpAdapter.class);
 
-                        if (!upInfo.getUid().equals(uid) && upInfo.getDonate_switch().equals("true"))
+                        if (!upInfo.getUid().equals(uid))
                         {
                             if (upInfo.getZilla().toLowerCase().contains(Zilla.toLowerCase())){
 
@@ -293,7 +299,8 @@ public class BloodDonor extends AppCompatActivity implements View.OnClickListene
                     {
                         SignUpAdapter upInfo = dataSnapshot1.getValue(SignUpAdapter.class);
 
-                        if (!upInfo.getUid().equals(uid) && upInfo.getDonate_switch().toLowerCase().equals("true"))
+                        assert upInfo != null;
+                        if (!upInfo.getUid().equals(uid))
                         {
                             if (upInfo.getZilla().toLowerCase().contains(Zilla.toLowerCase())){
 
@@ -342,7 +349,7 @@ public class BloodDonor extends AppCompatActivity implements View.OnClickListene
 
                         SignUpAdapter upInfo = dataSnapshot1.getValue(SignUpAdapter.class);
 
-                        if (!upInfo.getUid().equals(uid) && upInfo.getDonate_switch().toLowerCase().equals("true"))
+                        if (!upInfo.getUid().equals(uid))
                         {
                              if( upInfo.getUpazila().toLowerCase().contains(query.toLowerCase()) ||
                                     upInfo.getVillage().toLowerCase().contains(query.toLowerCase()) ||

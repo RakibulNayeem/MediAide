@@ -114,6 +114,7 @@
     <string name="area_village">Area/Village</string>
     <string name="upazila_university">Upazila/University</string>
     <string name="zilla">Zilla</string>
+    <string name="zilla_title">Zilla : </string>
     <string name="ambulance_account">Create Account</string>
     <string name="show_your_account">Your Account</string>
     <string name="approve_blood_bank">Approve Blood Bank</string>
@@ -137,19 +138,19 @@
     <string name="time_and_date">"Time and Date : "</string>
     <string name="contact">"Contact : "</string>
     <string name="location">"Location : "</string>
-    <string name="hospital_name">"Hospital name : "</string>
-    <string name="blood_group">"Blood Group : "</string>
+    <string name="hospital_name">Hospital name</string>
+    <string name="hospital_name_title">Hospital name : </string>
+    <string name="blood_group">Blood Group</string>
+    <string name="blood_group_title">"Blood group : "</string>
     <string name="_00_00">00:00</string>
     <string name="name">Name</string>
     <string name="driver">"Driver : "</string>
     <string name="vehicle_no">"Vehicle No : "</string>
-    <string name="zilla_title">"Zilla : "</string>
     <string name="select_zilla">Select Zilla</string>
     <string name="area_village_title">Area/Village : </string>
     <string name="select_language">Select Language</string>
     <string name="our_services">Our Services</string>
     <string name="name_title">Name :</string>
-    <string name="blood_group_title">Blood group :</string>
     <string name="donate_title">I Want To Donate</string>
     <string name="contact_title">Contact :</string>
     <string name="email_title">Email :</string>
@@ -166,6 +167,19 @@
     <string name="didn_t_receive_the_otp">Didn\'t receive the OTP?</string>
     <string name="resend_otp">RESEND OTP</string>
     <string name="verify_button">Verify</string>
+    <string name="have_an_account_login_now">Already Have an Account? Login Now</string>
+    <string name="new_user_register_now">New User? Register Now</string>
+    <string name="top_icon">TOP ICON</string>
+    <string name="forgot_password">FORGOT PASSWORD?</string>
+    <string name="or">OR</string>
+    <string name="google_icon">google icon</string>
+    <string name="facebook_icon">facebook icon</string>
+    <string name="sign_out">Log Out</string>
+    <string name="create_post">Create Post</string>
+    <string name="hospital_name_area_with_location">Hospital Name/Area(with Location)</string>
+    <string name="date_and_time">Date and Time</string>
+    <string name="details_purpose_and_number_of_bags">Details(Purpose and number of bags)</string>
+
 
     <string-array name="bd_districts">
         <item>Bagerhat</item>

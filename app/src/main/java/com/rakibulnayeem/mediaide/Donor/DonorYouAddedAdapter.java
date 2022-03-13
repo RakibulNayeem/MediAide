@@ -48,12 +48,12 @@ public class DonorYouAddedAdapter extends RecyclerView.Adapter<DonorYouAddedAdap
         final String village = uploadList.get(position).getVillage();
         final  String blood_group = uploadList.get(position).getBlood_group();
         final String upazila = uploadList.get(position).getUpazila();
+        final String zilla = uploadList.get(position).getZilla();
         final  String last_donation_date = uploadList.get(position).getLast_donation_date();
 
         //set data
         holder.bloodGroupTv.setText(blood_group);
-        holder.upazilaTv.setText(upazila);
-        holder.villageTv.setText(village);
+        holder.addressTv.setText(new StringBuilder().append(village).append(", ").append(upazila).append(", ").append(zilla).toString());
         holder.lastDDTv.setText(last_donation_date);
 
 
@@ -79,14 +79,13 @@ public class DonorYouAddedAdapter extends RecyclerView.Adapter<DonorYouAddedAdap
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView bloodGroupTv,upazilaTv,villageTv,lastDDTv;
+        TextView bloodGroupTv,addressTv,lastDDTv;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             bloodGroupTv = itemView.findViewById(R.id.bloodGroupCardTvId);
-            upazilaTv = itemView.findViewById(R.id.upazilaCardTvId);
-            villageTv = itemView.findViewById(R.id.villageCardTvId);
+            addressTv = itemView.findViewById(R.id.addressCardTvId);
             lastDDTv = itemView.findViewById(R.id.lastDDCardTvId);
 
         }

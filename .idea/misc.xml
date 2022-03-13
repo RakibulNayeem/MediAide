@@ -3,14 +3,49 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/drawable-anydpi/ic_location.xml" value="0.22552083333333334" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/drawable-hdpi/round_bg_deep_green.xml" value="0.18177083333333333" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/drawable-mdpi/round_bg.xml" value="0.22205128205128205" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/drawable-mdpi/round_bg_deep_green.xml" value="0.18177083333333333" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/drawable-mdpi/round_border.xml" value="0.22205128205128205" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/drawable/circle.xml" value="0.22552083333333334" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.22552083333333334" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/drawable/ic_email.xml" value="0.22552083333333334" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/drawable/ic_person.xml" value="0.22552083333333334" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/drawable/round_bg.xml" value="1.0208333333333333" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/drawable/round_bg_deep_green.xml" value="0.18177083333333333" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/drawable/round_border.xml" value="1.0208333333333333" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/drawable/wave.xml" value="0.22205128205128205" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_add_health_care.xml" value="0.209375" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_blood_donor.xml" value="0.209375" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_blood_donor_profile.xml" value="0.25" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_doctors_profile.xml" value="0.22" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_doctors_profile_2_demo.xml" value="0.22" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_hospital.xml" value="0.209375" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_hospital_doctors_profile.xml" value="0.20615384615384616" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_login2.xml" value="0.22" />
         <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_login_with_phone.xml" value="0.18611111111111112" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_main.xml" value="0.209375" />
         <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_my_posts.xml" value="0.209375" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_post.xml" value="0.209375" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_sign_up.xml" value="0.21" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_sign_up2.xml" value="0.22" />
         <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_update_profile.xml" value="0.209375" />
-        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_verify_phone_no.xml" value="0.18611111111111112" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/activity_verify_phone_no.xml" value="0.22" />
         <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/ambulance_sample_layout.xml" value="0.1935185185185185" />
-        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/blood_bank_sample_layout.xml" value="0.1935185185185185" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/approve_doctor_sample_layout.xml" value="0.209375" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/blood_bank_sample_layout.xml" value="0.25" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/blood_request_sample_layout.xml" value="0.25" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/doctors_sample_layout.xml" value="0.25" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/fragment_about_doctor.xml" value="0.209375" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/fragment_chamber.xml" value="0.22" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/fragment_experience.xml" value="0.1953125" />
         <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/fragment_home.xml" value="0.1935185185185185" />
         <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/fragment_request.xml" value="0.209375" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/hospital_sample_layout.xml" value="0.25" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/hospitals_doctors_sample_layout.xml" value="0.22" />
+        <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/layout/users_row_sample_view.xml" value="0.25" />
         <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/menu/add_ambulance_menu_layout.xml" value="0.22" />
         <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/menu/add_b_bank_menu_layout.xml" value="0.17447916666666666" />
         <entry key="..\:/Android_Studio/MediAide Final Project/MediAide for Upload/MediAide/app/src/main/res/menu/add_doctor_for_hospital_menu_layout.xml" value="0.17447916666666666" />

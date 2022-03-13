@@ -1,6 +1,7 @@
 package com.rakibulnayeem.mediaide.Posts;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -15,8 +16,12 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.rakibulnayeem.mediaide.MainActivity;
 import com.rakibulnayeem.mediaide.R;
 
@@ -32,19 +37,19 @@ public class Post extends AppCompatActivity implements View.OnClickListener {
     Calendar calendar;
 
     String[] bloodGroupNames, bd_districts;
-    String uid;
+    String uid, user_name;
     DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
-        setTitle("Create Post");
-
 
         //adding back button to the tool bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         databaseReference = FirebaseDatabase.getInstance().getReference("posts");
         bloodGroupNames = getResources().getStringArray(R.array.blood_group_names);
@@ -71,8 +76,32 @@ public class Post extends AppCompatActivity implements View.OnClickListener {
         zillaEt.setThreshold(1);
         zillaEt.setAdapter(adapter2);
 
-
         addPostBtn.setOnClickListener(this);
+
+        // get user name
+        // set info
+        Query query = databaseReference.orderByChild("uid").equalTo(uid);
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //check until required data get
+                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren())
+                {
+                    //get data
+                    String name = ""+dataSnapshot1.child("name").getValue();
+                    user_name = name;
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                Toast.makeText(getApplicationContext(),"Failed to load information ",Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+
 
     }
 
@@ -166,7 +195,7 @@ public class Post extends AppCompatActivity implements View.OnClickListener {
 
         String key = databaseReference.push().getKey();
 
-        PostAdapter adapter = new PostAdapter(uid, key,current_time, hospital_name,blood_group,date_time,details,zilla,phone_number);
+        PostAdapter adapter = new PostAdapter(uid,user_name, key,current_time, hospital_name,blood_group,date_time,details,zilla,phone_number);
 
         databaseReference.child(key).setValue(adapter);
 

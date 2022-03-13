@@ -71,7 +71,7 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.MyView
         holder.nameTv.setText(name);
         holder.categoryTv.setText(category);
         holder.addressTv.setText(address);
-        holder.zillaTv.setText(zilla);
+      //  holder.zillaTv.setText(zilla);
         holder.phoneNumberTv.setText(phone_number);
 
 
@@ -145,7 +145,7 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.MyView
             nameTv = itemView.findViewById(R.id.nameCardTvId);
             categoryTv = itemView.findViewById(R.id.categoryCardTvId);
             addressTv = itemView.findViewById(R.id.addressCardTvId);
-            zillaTv = itemView.findViewById(R.id.zillaCardTvId);
+          //  zillaTv = itemView.findViewById(R.id.zillaCardTvId);
             phoneNumberTv = itemView.findViewById(R.id.phoneNumberCardTvId);
             callHospitalIv = itemView.findViewById(R.id.callHospitalBtnId);
         }
